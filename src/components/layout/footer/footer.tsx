@@ -25,24 +25,13 @@ const Footer = () => {
                                     <h4 className={ "footer_top_h4" }>Suivez-nous</h4>
                                     <ul className={ "tribal_socials" }>
                                         <li className={ "tribal_socials_li" }>
-                                            <Link className={ "tribal_socials_li_a" } href="https://www.instagram.com/tribalofficiel/" target="_blank"><i className={`ri-instagram-line tribal_socials_li_a_i`}></i></Link>
-                                        </li>
-                                        <li className={ "tribal_socials_li" }>
-                                            <Link className={ "tribal_socials_li_a"  } href="https://twitter.com/tribal_Officiel" target="_blank"><i className={`ri-twitter-x-line tribal_socials_li_a_i`}></i></Link>
-                                        </li>
-                                        <li className={ "tribal_socials_li" }>
-                                            <Link className={ "tribal_socials_li_a"  } href="https://www.tiktok.com/@saintquentinbasketball" target="_blank"><i className={`ri-tiktok-line tribal_socials_li_a_i`}></i></Link>
-                                        </li>
-                                    </ul>
-                                    <ul className={ "tribal_socials" }>
-                                        <li className={ "tribal_socials_li" }>
-                                            <Link className={ "tribal_socials_li_a"  } href="https://www.linkedin.com/company/tribal/" target="_blank"><i className={`ri-linkedin-box-line ${"tribal_socials_li_a_i"}`}></i></Link>
-                                        </li>
-                                        <li className={ "tribal_socials_li" }>
                                             <Link className={ "tribal_socials_li_a"  } href="https://www.facebook.com/tribalofficiel" target="_blank"><i className={`ri-facebook-circle-line ${"tribal_socials_li_a_i"}`}></i></Link>
                                         </li>
                                         <li className={ "tribal_socials_li" }>
                                             <Link className={ "tribal_socials_li_a"  } href="https://www.youtube.com/@saint-quentinbasketball7185" target="_blank"><i className={`ri-youtube-line ${"tribal_socials_li_a_i"}`}></i></Link>
+                                        </li>
+                                        <li className={ "tribal_socials_li" }>
+                                            <Link className={ "tribal_socials_li_a" } href="https://www.instagram.com/tribalofficiel/" target="_blank"><i className={`ri-instagram-line tribal_socials_li_a_i`}></i></Link>
                                         </li>
                                     </ul>
                                 </div>

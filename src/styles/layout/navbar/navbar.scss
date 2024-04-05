@@ -274,7 +274,6 @@
 	
 	.offcanvas.offcanvas-end
 	{
-		background-color: #008374!important;
 		color: #fff;
 	}
 	.offcanvas-header h5
@@ -292,6 +291,10 @@
 	z-index: 997;
 	background-color: #212226FF;
 	transition: all 0.3s ease-in-out;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 }
 
 .header.sticked {
@@ -299,9 +302,8 @@
 	top: 0;
 	right: 0;
 	left: 0;
-	height: 115px;
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-	background: rgba(var(--color-primary-rgb), 0.95);
+	background: rgba(33, 34, 38, 0.75);
 }
 
 .header .logo img {
