@@ -21,6 +21,8 @@
 	/*--color-secondary: #f85a40;*/
 	--color-secondary: #fff;
 	--color-primary-rgb: 0, 131, 116;
+	--color-primary-bg: rgba(33, 34, 38, 1);
+	--color-secondary-airsoft: rgba(255, 116, 0, 1);
 }
 
 /* Fonts */
@@ -34,11 +36,33 @@
 	scroll-behavior: smooth;
 }
 
+body{
+	background: var(--color-primary-bg);
+}
+
+section{
+	margin: 200px 0;
+}
+
 a {
 	text-decoration: none;
 }
 
 /*-------------     DESCRIPTION    -------------*/
+#description_bloc
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	.container{
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
 .description_box{
 	h2{
 		color: #fff;
@@ -48,7 +72,89 @@ a {
 	}
 	p{
 		color: #fff;
-		font-size: 1.3em;
+		font-size: 1.7em;
 		font-family: var(--font-fourth);
+	}
+}
+
+/*-------------     SECTION TITLE   -------------*/
+.col-md-12.title_box
+{
+	background: rgba(33, 34, 38, 1);
+}
+.section_title
+{
+	
+	background: var(--color-primary-bg);
+	padding: 0 25px;
+	margin-bottom: 2rem;
+	
+	h2{
+		color: #fff;
+		font-size: 3rem;
+		font-family: var(--font-fourth);
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}
+
+.section_title.align_left{
+	border-left: 25px solid var(--color);
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 25%;
+	
+}
+
+.section_title.align_right{
+	border-right: 25px solid var(--color);
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 25%;
+}
+
+/*------------------    Gallery    -----------------*/
+#gallery{
+	margin-top: 200px;
+}
+
+/*------------------    Activity    -----------------*/
+#activity
+{
+	height: 80vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 5rem;
+	
+	.row.content{
+		color: #fff;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: 1.7rem;
+		max-width: 600px;
+		font-family: var(--font-fourth);
+	}
+}
+
+/*------------------    Immersion    -----------------*/
+#immersion{
+	height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 5rem;
+	
+	.row.content{
+			color: #fff;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			font-size: 1.7rem;
+			max-width: 600px;
+			font-family: var(--font-fourth);
 	}
 }

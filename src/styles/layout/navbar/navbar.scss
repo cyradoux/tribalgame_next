@@ -289,7 +289,8 @@
 
 .header {
 	z-index: 997;
-	background-color: #212226FF;
+	background: transparent;
+	/*background-color: #212226FF;*/
 	transition: all 0.3s ease-in-out;
 	position: fixed;
 	top: 0;

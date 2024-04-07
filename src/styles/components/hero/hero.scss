@@ -123,8 +123,15 @@
 	}
 	.play img
 	{
-		margin-right: 10px;
+		margin-left: 10px;
 		max-width: 50px;
+		transform: rotateY(180deg);
+		transition: 500ms ease-in-out;
+	}
+	.play:hover img
+	{
+		transform: rotateY(180deg) translateX(-20px);
+		transition: 500ms ease-in-out;
 	}
 	.trailer
 	{

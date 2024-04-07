@@ -1,6 +1,8 @@
 import React from 'react';
 import airsoftHero from "../../assets/img/airsoft/airsoft2.webp";
 import logo from "../../assets/img/logo/logo.png";
+import arrow from "../../assets/img/icones/Arrow.webp";
+
 
 export type HeroPropsType = {
     bgColor: string,
@@ -15,8 +17,7 @@ export type HeroPropsType = {
 
 const Hero = () => {
     const style = {
-        background: `linear-gradient(to right, rgba(33, 34, 38, 1) 0%, rgba(35, 40, 25, 0.5) 100%), url("${airsoftHero.src}")`,
-        backgroundAttachment: "fixed",
+        background: `linear-gradient(to top, rgba(33, 34, 38, 1) 0%, rgba(35, 40, 25, 0.5) 100%), url("${airsoftHero.src}")`,
         backgroundSize: "cover"
     }
 
@@ -42,7 +43,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <a href="" className="play">
-                        <img src="" alt=""/>Watch Trailer
+                        Regarder <img src={arrow.src} alt=""/>
                     </a>
                 </div>
             </div>
