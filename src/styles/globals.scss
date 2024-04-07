@@ -17,7 +17,7 @@
 /* Colors */
 :root {
 	--color-default: #222222;
-	--color-primary: #008374;
+	--color-primary: #fff;
 	/*--color-secondary: #f85a40;*/
 	--color-secondary: #fff;
 	--color-primary-rgb: 0, 131, 116;
@@ -36,4 +36,19 @@
 
 a {
 	text-decoration: none;
+}
+
+/*-------------     DESCRIPTION    -------------*/
+.description_box{
+	h2{
+		color: #fff;
+		font-family: var(--font-fourth);
+		font-size: 3em;
+		text-transform: uppercase;
+	}
+	p{
+		color: #fff;
+		font-size: 1.3em;
+		font-family: var(--font-fourth);
+	}
 }

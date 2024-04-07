@@ -26,7 +26,7 @@ const Hero = () => {
                 <div className={`banner`} style={style}>
                     <div className="content">
                         <img src={logo.src} alt="logo" className="movieTitle"/>
-                        <h2> Vivez l’expérience immersive d’une partie d’Airsoft près de Lille!!</h2>
+                        <h2>Retrouvez les sensations de votre enfance grandeur nature dans une partie d’Airsoft</h2>
                         <h4>
                             <span>2020</span>
                             <span>12+</span>
