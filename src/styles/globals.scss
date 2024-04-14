@@ -41,7 +41,7 @@ body{
 }
 
 section{
-	margin: 200px 0;
+	padding: 0 300px;
 }
 
 a {
@@ -86,8 +86,9 @@ a {
 {
 	
 	background: var(--color-primary-bg);
-	padding: 0 25px;
-	margin-bottom: 2rem;
+	/*padding: 0 25px;*/
+	padding: 25px;
+	/*margin-bottom: 2rem;*/
 	
 	h2{
 		color: #fff;
@@ -102,20 +103,19 @@ a {
 	border-left: 25px solid var(--color);
 	display: flex;
 	justify-content: flex-start;
-	margin-left: 25%;
-	
+	/*margin-left: 25%;*/
 }
 
 .section_title.align_right{
 	border-right: 25px solid var(--color);
 	display: flex;
 	justify-content: flex-end;
-	margin-right: 25%;
+	/*margin-right: 25%;*/
 }
 
 /*------------------    Gallery    -----------------*/
 #gallery{
-	margin-top: 200px;
+	/*margin-top: 200px;*/
 }
 
 /*------------------    Activity    -----------------*/
@@ -126,7 +126,7 @@ a {
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 5rem;
+	/*margin-top: 5rem;*/
 	
 	.row.content{
 		color: #fff;
@@ -146,7 +146,7 @@ a {
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 5rem;
+	/*margin-top: 5rem;*/
 	
 	.row.content{
 			color: #fff;
@@ -157,4 +157,17 @@ a {
 			max-width: 600px;
 			font-family: var(--font-fourth);
 	}
+}
+
+/*------------------    Immersion    -----------------*/
+#equipment
+{
+	min-height: 100vh;
+}
+
+.equipment_content
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

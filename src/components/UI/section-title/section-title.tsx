@@ -1,14 +1,17 @@
 import React from 'react';
+import bg from "../../../assets/img/layout/bg.png";
 
 export type SectionTitlePropsType = {
     title: string,
     borderColor: string,
-    borderPosition: string
+    borderPosition: string,
+    background: string
 }
 
-const SectionTitle = ({ title, borderColor, borderPosition }: SectionTitlePropsType) => {
+const SectionTitle = ({ title, borderColor, borderPosition, background }: SectionTitlePropsType) => {
     const sectionTitleStyle: React.CSSProperties & {"--color": string} = {
-        '--color': borderColor
+        '--color': borderColor,
+        backgroundColor: background
     }
     return (
         <>

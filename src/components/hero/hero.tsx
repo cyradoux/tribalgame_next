@@ -1,8 +1,8 @@
 import React from 'react';
-import airsoftHero from "../../assets/img/airsoft/airsoft2.webp";
+import airsoftHero from "../../assets/img/airsoft/player3.png";
 import logo from "../../assets/img/logo/logo.png";
 import arrow from "../../assets/img/icones/Arrow.webp";
-
+import aisoftLogo from "../../assets/img/logo/airsoftLogo.svg";
 
 export type HeroPropsType = {
     bgColor: string,
@@ -26,7 +26,7 @@ const Hero = () => {
             <div className={"hero"}>
                 <div className={`banner`} style={style}>
                     <div className="content">
-                        <img src={logo.src} alt="logo" className="movieTitle"/>
+                        <img src={aisoftLogo.src} alt="logo" className="movieTitle"/>
                         <h2>Retrouvez les sensations de votre enfance grandeur nature dans une partie d’Airsoft</h2>
                         <h4>
                             <span>2020</span>

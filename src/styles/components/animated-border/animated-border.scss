@@ -1,0 +1,57 @@
+.animated_border_box
+{
+	position: relative;
+	width: 80%;
+	height: 600px;
+	background: rgba(0,0,0,0.75);
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.animated_border_box::after
+{
+	content: '';
+	position: absolute;
+	width: 200vw;
+	height: 200vh;
+	background-image: conic-gradient(transparent, transparent, transparent, var(--color-secondary-airsoft));
+	animation: animate 4s linear infinite;
+	animation-delay: -2s;
+}
+
+.animated_border_box::before
+{
+	content: '';
+	position: absolute;
+	width: 200vw;
+	height: 200vh;
+	background-image: conic-gradient(transparent, transparent, transparent, var(--color-secondary-airsoft));
+	animation: animate 4s linear infinite;
+}
+@keyframes animate {
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+.animated_border_box span
+{
+	position: absolute;
+	inset: 5px;
+	border-radius: 16px;
+	background: #0c1022;
+	z-index: 1;
+}
+.animated_border_box h2
+{
+	position: relative;
+	z-index: 2;
+	color: #fff;
+	font-size: 10em;
+}

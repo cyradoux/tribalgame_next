@@ -7,14 +7,18 @@ import SectionTitle from "@/components/UI/section-title/section-title";
 import airsoftHero from "@/assets/img/airsoft/airsoft2.webp";
 import player1 from "../assets/img/airsoft/player5_bg.png";
 import player2 from "../assets/img/airsoft/mask_bg.png"
+import bg from "../assets/img/layout/bg.png";
+import AnimatedBorder from "@/components/UI/animated-border/animated-border";
 
 const Airsoft = () => {
 
     const style = {
-        background: `linear-gradient(to bottom, rgba(33, 34, 38, 1) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player1.src}")`,
-        backgroundSize: "cover",
+        backgroundImage: `linear-gradient(to top, rgba(33, 34, 38, 1) 0%, rgba(33, 34, 38, 0.01) 50%), url("${bg.src}"), url("${player1.src}")`,
+        backgroundRepeat: "no-repeat, no-repeat, no-repeat",
+        backgroundSize: "cover, cover, cover", // Ajustez selon le besoin
         backgroundAttachment: "fixed",
-        padding: 0
+        padding: 0,
+        minHeight: "100vh"
     }
 
     const style2 = {
@@ -54,12 +58,22 @@ const Airsoft = () => {
             <Hero/>
 
             {/*-----------  Description  -------------*/}
-            <section id={"description_bloc"}>
-                <div className={"container-fluid"} style={{backgroundColor: "rgba(33, 34, 38, 1)"}}>
-                    <div className={"container"}  style={{backgroundColor: "rgba(33, 34, 38, 1)"}}>
+            <section id={"description_bloc"} style={{
+                background: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundAttachment: "fixed"
+            }}>
+                <div className={"container-fluid"} >
+                    <SectionTitle
+                        title={"Jouer à se faire peur"}
+                        borderColor={"var(--color-secondary-airsoft)"}
+                        borderPosition={"align_left"}
+                        background={'rgba(33,34,38,0)'}
+                    ></SectionTitle>
+                    <div className={"container"}>
                         <div className="row">
                             <div className={"col-md-6 description_box"}>
-                                <SectionTitle title={"Jouer à se faire peur"} borderColor={"var(--color-secondary-airsoft)"} borderPosition={"align_left"}></SectionTitle>
                                 <p>
                                     Vous vous souvenez, lorsqu’<strong>avec vos camarades vous partiez sur le sentier de la guerre</strong> ?
                                     Ce petit frisson d’excitation et de frayeur, Tribal Games vous propose de le retrouver en version XXL.
@@ -87,6 +101,7 @@ const Airsoft = () => {
                     title={"Une activité immersive et sans risque"}
                     borderColor={'var(--color-secondary-airsoft)'}
                     borderPosition={"align_right"}
+                    background={'transparent'}
                 ></SectionTitle>
                 <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
                     <div className="row content">
@@ -116,6 +131,7 @@ const Airsoft = () => {
                     title={"L’airsoft remplace plus d’une séance de gym !"}
                     borderColor={'var(--color-secondary-airsoft)'}
                     borderPosition={"align_left"}
+                    background={'transparent'}
                 ></SectionTitle>
                 <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-start"}}>
                     <div className="row content">
@@ -140,15 +156,36 @@ const Airsoft = () => {
             </section>
 
             {/*-----------  Gallery  -------------*/}
-            <section id={"gallery"} className={"container-fluid"}>
+            <section id={"gallery"} className={"container-fluid"} style={{
+                background: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundAttachment: "fixed"
+            }}>
                 <SectionTitle
                     title={"Galerie Photos"}
                     borderColor={'var(--color-secondary-airsoft)'}
                     borderPosition={"align_right"}
+                    background={"transparent"}
                 ></SectionTitle>
                 <Slider/>
             </section>
+            <section id={"equipment"} className={"container-fluid"}>
+                <div className={"container-fluid"}>
+                    <div className="row">
+                        <SectionTitle
+                            title={"Conditions et équipement"}
+                            borderColor={"var(--color-secondary-airsoft)"}
+                            borderPosition={'align_left'}
+                            background={"transparent"}
+                        ></SectionTitle>
+                        <div className={"col-md-12 equipment_content"}>
+                            <AnimatedBorder/>
+                        </div>
 
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
