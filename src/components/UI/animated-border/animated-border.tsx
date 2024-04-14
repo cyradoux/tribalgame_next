@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 
-const AnimatedBorder = () => {
+export type AnimatedBorderPropsType = {
+    children: ReactNode
+}
+const AnimatedBorder = ({ children }: AnimatedBorderPropsType) => {
     return (
         <>
             <div className="animated_border_box">
-                <span></span>
-
+                <span>
+                    { children }
+                </span>
             </div>
         </>
     );

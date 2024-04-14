@@ -13,9 +13,9 @@ import AnimatedBorder from "@/components/UI/animated-border/animated-border";
 const Airsoft = () => {
 
     const style = {
-        backgroundImage: `linear-gradient(to top, rgba(33, 34, 38, 1) 0%, rgba(33, 34, 38, 0.01) 50%), url("${bg.src}"), url("${player1.src}")`,
-        backgroundRepeat: "no-repeat, no-repeat, no-repeat",
-        backgroundSize: "cover, cover, cover", // Ajustez selon le besoin
+        backgroundImage: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+        backgroundRepeat: "no-repeat, no-repeat",
+        backgroundSize: "cover", // Ajustez selon le besoin
         backgroundAttachment: "fixed",
         padding: 0,
         minHeight: "100vh"
@@ -156,12 +156,7 @@ const Airsoft = () => {
             </section>
 
             {/*-----------  Gallery  -------------*/}
-            <section id={"gallery"} className={"container-fluid"} style={{
-                background: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundAttachment: "fixed"
-            }}>
+            <section id={"gallery"} className={"container-fluid"} style={style}>
                 <SectionTitle
                     title={"Galerie Photos"}
                     borderColor={'var(--color-secondary-airsoft)'}
@@ -170,7 +165,8 @@ const Airsoft = () => {
                 ></SectionTitle>
                 <Slider/>
             </section>
-            <section id={"equipment"} className={"container-fluid"}>
+
+            <section id={"equipment"} className={"container-fluid"} style={style}>
                 <div className={"container-fluid"}>
                     <div className="row">
                         <SectionTitle
@@ -180,9 +176,15 @@ const Airsoft = () => {
                             background={"transparent"}
                         ></SectionTitle>
                         <div className={"col-md-12 equipment_content"}>
-                            <AnimatedBorder/>
+                            <AnimatedBorder>
+                                <p>
+                                    Pour nous rejoindre, rien de plus simple il vous suffit d'avoir entre 8 ans pour le laser et 16ans pour le l'airsoft.
+                                </p>
+                                <p>
+                                    Au niveau de l'équipement vous pouvez apporter votre équipement ou en louer sur place.
+                                </p>
+                            </AnimatedBorder>
                         </div>
-
                     </div>
                 </div>
             </section>
