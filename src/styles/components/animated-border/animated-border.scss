@@ -2,8 +2,8 @@
 {
 	position: relative;
 	width: 80%;
-	height: 600px;
-	background: rgba(0,0,0,0.75);
+	height: 500px;
+	background: rgba(33, 34, 38, 0.7);
 	border-radius: 20px;
 	display: flex;
 	justify-content: center;
@@ -46,13 +46,14 @@
 	position: absolute;
 	inset: 5px;
 	border-radius: 16px;
-	background: #0c1022;
+	/*background: #0c1022;*/
+	background: rgba(33, 34, 38, 1);
 	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 5em;
+	padding: 5em 15em;
 	font-family: var(--font-fourth);
 	color: #fff;
 	font-size: 1.7rem;

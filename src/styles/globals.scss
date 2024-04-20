@@ -123,7 +123,7 @@ a {
 {
 	height: 80vh;
 	display: flex;
-	justify-content: flex-start;
+	//justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
 	/*margin-top: 5rem;*/
@@ -131,10 +131,10 @@ a {
 	.row.content{
 		color: #fff;
 		display: flex;
-		justify-content: flex-end;
+		//justify-content: flex-end;
 		align-items: center;
 		font-size: 1.7rem;
-		max-width: 600px;
+		//max-width: 600px;
 		font-family: var(--font-fourth);
 	}
 }
@@ -174,4 +174,10 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/*------------------    Activity    -----------------*/
+.contact_form_box
+{
+	color: #fff;
 }

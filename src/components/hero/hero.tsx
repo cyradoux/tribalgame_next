@@ -38,8 +38,8 @@ const Hero = () => {
                             Frissons et rires garantis en Wallonie avec l’Airsoft, jeu de plein air où l’on s’affronte avec des répliques et billes biodégradables.
                         </p>
                         <div className="buttons">
-                            <a href="#"><i className="fa fa-play" aria-hidden="true"></i>Play</a>
-                            <a href="#"><i className="fa fa-plus" aria-hidden="true"></i>My list</a>
+                            {/*<a href="#"><i className="fa fa-play" aria-hidden="true"></i>Play</a>*/}
+                            <a href="#"><i className="fa fa-plus" aria-hidden="true"></i>Réserver</a>
                         </div>
                     </div>
                     <a href="" className="play">

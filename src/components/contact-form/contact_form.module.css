@@ -1,0 +1,205 @@
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.info_container {
+    background-color: var(--color-primary);
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info_item {
+    width: 100%;
+    background-color: #1B1D15;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.info_item:last-child {
+    margin-bottom: 0;
+}
+
+.info_item_i {
+    font-size: 20px;
+    color: #fff;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.info_item_h4 {
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.info_item_p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.info_item:hover .info_item_i {
+    background: #fff;
+    color: var(--color-primary);
+}
+
+.email_form {
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 34, 38, 0.4);
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 0 10px 10px 0;
+}
+
+.form_group {
+    padding-bottom: 8px;
+}
+
+.error_message {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: oblique;
+    background: var(--color-secondary);
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.input_error_message
+ {
+    color: #CC0000;
+    font-style: oblique;
+    font-size: 12px;
+    margin-top: 10px;
+ }
+
+.sent_message {
+    color: #fff;
+    background: rgba(var(--color-primary-rgb), 0.9);
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.contact button[type=submit] {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* background: #de0611; */
+    color: #fff;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: ease 0.5s;
+}
+
+.contact button[type=submit]:hover {
+    background: var(--color-secondary-airsoft);
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*----   Custom Input  -----*/
+.inputBox
+{
+    position: relative;
+}
+.inputBox_input
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-secondary-airsoft);
+    border-radius: 5px;
+    outline: none;
+    color: #000000;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox_span
+{
+    position: absolute;
+    left: 20px;
+    top: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(var(--color-primary-rgb),0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox_input:valid ~ .inputBox_span,
+.inputBox_input:focus ~ .inputBox_span
+{
+    transform: translateX(10px) translateY(-10px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    border-left: 1px solid var(--color-secondary-airsoft);
+    border-right: 1px solid var(--color-secondary-airsoft);
+    letter-spacing: 0.2em;
+    background: var(--color-secondary-airsoft);
+    color: #1d2b3a;
+    border-radius: 2px;
+}
+
+.inputBox:nth-child(2) .inputBox_input:valid ~ .inputBox_span,
+.inputBox:nth-child(2) .inputBox_input:focus ~ .inputBox_span
+{
+    background: var(--color-secondary-airsoft);;
+    color: #1d2b3a;
+    border-radius: 2px;
+}
+
+.inputBox_input:valid,
+.inputBox_input:focus
+{
+    border: 1px solid var(--color-secondary-airsoft);;
+}
+
+.required
+{
+    font-style: oblique;
+    font-size: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.consent_box {
+    font-style: oblique;
+    font-size: 12px;
+}

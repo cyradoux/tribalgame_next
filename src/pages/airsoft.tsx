@@ -9,6 +9,10 @@ import player1 from "../assets/img/airsoft/player5_bg.png";
 import player2 from "../assets/img/airsoft/mask_bg.png"
 import bg from "../assets/img/layout/bg.png";
 import AnimatedBorder from "@/components/UI/animated-border/animated-border";
+import ImageStack from "@/components/image-stack/image-stack";
+import rayure from "../assets/img/layout/RAYURE_airsoft.svg";
+import airsoft1 from "../assets/img/airsoft/airsoft1.png";
+import ContactForm from "@/components/contact-form/contact-form";
 
 const Airsoft = () => {
 
@@ -105,7 +109,11 @@ const Airsoft = () => {
                 ></SectionTitle>
                 <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
                     <div className="row content">
-                        <div className="col-md-12">
+                        <ImageStack
+                            frontImg={airsoft1.src}
+                            backImg={rayure.src}
+                        ></ImageStack>
+                        <div className="col-md-6">
                             <p>
                                 Vêtus de treillis fournis par Tribal, équipés de votre arme d’airsoft -
                                 vous pouvez apporter la vôtre ou en emprunter une dans notre vaste choix -,
@@ -155,17 +163,7 @@ const Airsoft = () => {
                 </div>
             </section>
 
-            {/*-----------  Gallery  -------------*/}
-            <section id={"gallery"} className={"container-fluid"} style={style}>
-                <SectionTitle
-                    title={"Galerie Photos"}
-                    borderColor={'var(--color-secondary-airsoft)'}
-                    borderPosition={"align_right"}
-                    background={"transparent"}
-                ></SectionTitle>
-                <Slider/>
-            </section>
-
+            {/*-----------  Equipment  -------------*/}
             <section id={"equipment"} className={"container-fluid"} style={style}>
                 <div className={"container-fluid"}>
                     <div className="row">
@@ -188,6 +186,29 @@ const Airsoft = () => {
                     </div>
                 </div>
             </section>
+
+            {/*-----------  Gallery  -------------*/}
+            <section id={"gallery"} className={"container-fluid"} style={style}>
+                <SectionTitle
+                    title={"Galerie Photos"}
+                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderPosition={"align_right"}
+                    background={"transparent"}
+                ></SectionTitle>
+                <Slider/>
+            </section>
+
+            {/*-----------  Contact Form  -------------*/}
+            <div className={"container-fluid contact_form_box"} style={style}>
+                <SectionTitle
+                    title={"Contactez-nous"}
+                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderPosition={"align_left"}
+                    background={"transparent"}
+                ></SectionTitle>
+                <ContactForm/>
+            </div>
+
         </>
     );
 };
