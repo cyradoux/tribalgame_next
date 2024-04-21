@@ -23,6 +23,9 @@
 	--color-primary-rgb: 0, 131, 116;
 	--color-primary-bg: rgba(33, 34, 38, 1);
 	--color-secondary-airsoft: rgba(255, 116, 0, 1);
+	--color-secondary-lasergame: 255,0,245;
+	--color-secondary-paintball: rgba(51,0,255,1);
+	--color-primary-paintball: rgba(255,0,0,1);
 }
 
 /* Fonts */
@@ -81,7 +84,22 @@ a {
 .col-md-12.title_box
 {
 	background: rgba(33, 34, 38, 1);
+	display: flex;
 }
+
+.title_box.align_right
+{
+	flex-direction: row-reverse;
+}
+
+.title_box_border
+{
+	height: 120px;
+	width: 20px;
+	//background-image: linear-gradient(to bottom, #FF0000 0%, #3300FF 100%);
+	background-image: var(--color);
+}
+
 .section_title
 {
 	
@@ -100,16 +118,17 @@ a {
 }
 
 .section_title.align_left{
-	border-left: 25px solid var(--color);
+	//border-left: 25px solid var(--color);
 	display: flex;
 	justify-content: flex-start;
 	/*margin-left: 25%;*/
 }
 
 .section_title.align_right{
-	border-right: 25px solid var(--color);
+	//border-right: 25px solid var(--color);
 	display: flex;
 	justify-content: flex-end;
+	flex-direction: row-reverse;
 	/*margin-right: 25%;*/
 }
 

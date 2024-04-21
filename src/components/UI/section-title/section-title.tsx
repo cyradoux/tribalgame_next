@@ -15,8 +15,9 @@ const SectionTitle = ({ title, borderColor, borderPosition, background }: Sectio
     }
     return (
         <>
-            <div className={"col-md-12 title_box"}>
-                <div className={`section_title ${borderPosition}`} style={ sectionTitleStyle }>
+            <div className={`col-md-12 title_box ${borderPosition}`} style={{ background: background }}>
+                <div className={"title_box_border"} style={sectionTitleStyle}></div>
+                <div className={`section_title`}>
                     <h2>{ title }</h2>
                 </div>
             </div>

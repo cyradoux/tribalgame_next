@@ -17,9 +17,6 @@
 	position: absolute;
 	width: 200vw;
 	height: 200vh;
-	background-image: conic-gradient(transparent, transparent, transparent, var(--color-secondary-airsoft));
-	animation: animate 4s linear infinite;
-	animation-delay: -2s;
 }
 
 .animated_border_box::before
@@ -28,9 +25,20 @@
 	position: absolute;
 	width: 200vw;
 	height: 200vh;
-	background-image: conic-gradient(transparent, transparent, transparent, var(--color-secondary-airsoft));
-	animation: animate 4s linear infinite;
 }
+
+.paintball .animated_border_box::after{
+	background-image: conic-gradient(rgba(33, 34, 38, 0.8),rgba(255,0,0,0.3), rgba(33, 34, 38, 0.8), rgba(51,0,255, 0.3));
+	animation: animate 4s linear infinite;
+	
+}
+
+.paintball .animated_border_box::before{
+	background-image:  conic-gradient(rgba(33, 34, 38, 0.8),rgba(255,0,0,0.3), rgba(33, 34, 38, 0.8), rgba(51,0,255, 0.3));
+	animation: animate 4s linear infinite;
+	animation-delay: -2s;
+}
+
 @keyframes animate {
 	0%
 	{

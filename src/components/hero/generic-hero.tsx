@@ -17,7 +17,7 @@ export type HeroPropsType = {
 
 const GenericHero = ({bgColor, bgImage, logo, playersNb, minAge, duration, title, subTitle}: HeroPropsType) => {
     const style = {
-        background: `linear-gradient(to top, rgba(33, 34, 38, 1) 0%, rgba(35, 40, 25, 0.5) 100%), url("${bgImage}")`,
+        backgroundImage: `${bgColor}, url("${bgImage}")`,
         backgroundSize: "cover"
     }
 
