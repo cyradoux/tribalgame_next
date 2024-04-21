@@ -20,6 +20,7 @@ import slide3 from "../assets/img/airsoft/slides/slide3.png";
 import slide4 from "../assets/img/airsoft/slides/slide4.png";
 import slide5 from "../assets/img/airsoft/slides/slide5.png";
 import slide6 from "../assets/img/airsoft/slides/slide6.png";
+import paintball2 from "@/assets/img/paintball/paintball2.png";
 
 const slidesData = [
     { img: slide1.src, title: 'Slide 01', text: 'Lorem ipsum, dolor sit amet consectetur...' },
@@ -31,9 +32,13 @@ const slidesData = [
 ];
 
 const Airsoft = () => {
+    const sectionTitle = {
+        titleBorderColor: "linear-gradient(to bottom, #72443A 0%, #333E25 100%)",
+        titleBgColor: "rgba(0,0,0,0)"
+    }
 
     const style = {
-        backgroundImage: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+        backgroundImage: `radial-gradient(circle, rgba(51,62,37, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
         backgroundRepeat: "no-repeat, no-repeat",
         backgroundSize: "cover", // Ajustez selon le besoin
         backgroundAttachment: "fixed",
@@ -42,7 +47,7 @@ const Airsoft = () => {
     }
 
     const style2 = {
-        background: `linear-gradient(to bottom, rgba(33, 34, 38, 1) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player2.src}")`,
+        background: `linear-gradient(to bottom, rgba(51,62,37, 1) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player2.src}")`,
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
         padding: 0
@@ -61,12 +66,12 @@ const Airsoft = () => {
             }
             ::-webkit-scrollbar-thumb
             {
-                background: linear-gradient(transparent, #E36A01);
+                background: linear-gradient(transparent, #72443A);
                 border-radius: 6px;
             }
             ::-webkit-scrollbar-thumb:hover
             {
-                background: linear-gradient(transparent, #E36A01);
+                background: linear-gradient(transparent, #72443A);
             }
         `;
         const head = document.querySelector("head");
@@ -79,15 +84,15 @@ const Airsoft = () => {
 
             {/*-----------  Description  -------------*/}
             <section id={"description_bloc"} style={{
-                background: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
-                backgroundRepeat: "no-repeat",
+                background: `radial-gradient(circle, rgba(51,62,37, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+                backgroundRepeat: "no-repeat, no-repeat",
                 backgroundSize: "cover",
                 backgroundAttachment: "fixed"
             }}>
                 <div className={"container-fluid"} >
                     <SectionTitle
                         title={"Jouer à se faire peur"}
-                        borderColor={"var(--color-secondary-airsoft)"}
+                        borderColor={sectionTitle.titleBorderColor}
                         borderPosition={"align_left"}
                         background={'rgba(33,34,38,0)'}
                     ></SectionTitle>
@@ -119,7 +124,7 @@ const Airsoft = () => {
             <section id={"activity"} className={"container-fluid"} style={style}>
                 <SectionTitle
                     title={"Une activité immersive et sans risque"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_right"}
                     background={'transparent'}
                 ></SectionTitle>
@@ -128,6 +133,7 @@ const Airsoft = () => {
                         <ImageStack
                             frontImg={airsoft1.src}
                             backImg={rayure.src}
+                            backImgAlign={"align_left"}
                         ></ImageStack>
                         <div className="col-md-6">
                             <p>
@@ -150,10 +156,46 @@ const Airsoft = () => {
             </section>
 
             {/*-----------  Immersion  -------------*/}
+            <section id={"activity"} className={"container-fluid"} style={style}>
+                <SectionTitle
+                    title={"Un moment de pur bonheur à partager"}
+                    borderColor={ sectionTitle.titleBorderColor }
+                    borderPosition={"align_left"}
+                    background={"rgba(0,0,0,0.0)"}
+                ></SectionTitle>
+                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
+                    <div className="row content">
+
+                        <div className="col-md-6">
+                            <p>
+                                Pourquoi vous lancer dans une partie de paintball ?
+                                Demandez-le aux dizaines de milliers de joueurs qui vous ont précédé. Retrouvez leurs avis sur Google.
+                            </p>
+                            <p>
+                                Ils ont apprécié la performance sportive, les rires et les frayeurs entre amis, le terrain de jeu incroyablement vaste…
+                                Que ce soit lors d’une séance de teambuilding, d’un anniversaire.
+                            </p>
+                            <p>
+                                C’est l’activité idéale pour un enterrement de vie de garçon ou de filles, pleine de fun
+                                et d’adrénaline nous vous offrirons le scénario du LAPINOU ou d’une sortie entre amis, vous ne serez pas déçu !
+                            </p>
+                        </div>
+
+                        <ImageStack
+                            frontImg={airsoft1.src}
+                            backImg={rayure.src}
+                            backImgAlign={"align_right"}
+                        ></ImageStack>
+                    </div>
+                </div>
+            </section>
+
+            {/*-----------  Immersion  -------------*/}
+            {/*
             <section id={"immersion"} className={"container-fluid"} style={style2}>
                 <SectionTitle
                     title={"L’airsoft remplace plus d’une séance de gym !"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_left"}
                     background={'transparent'}
                 ></SectionTitle>
@@ -178,14 +220,15 @@ const Airsoft = () => {
                     </div>
                 </div>
             </section>
+            */}
 
             {/*-----------  Equipment  -------------*/}
-            <section id={"equipment"} className={"container-fluid"} style={style}>
+            <section id={"equipment"} className={"container-fluid airsoft"} style={style}>
                 <div className={"container-fluid"}>
                     <div className="row">
                         <SectionTitle
                             title={"Conditions et équipement"}
-                            borderColor={"var(--color-secondary-airsoft)"}
+                            borderColor={sectionTitle.titleBorderColor}
                             borderPosition={'align_left'}
                             background={"transparent"}
                         ></SectionTitle>
@@ -207,7 +250,7 @@ const Airsoft = () => {
             <section id={"gallery"} className={"container-fluid"} style={style}>
                 <SectionTitle
                     title={"Galerie Photos"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_right"}
                     background={"transparent"}
                 ></SectionTitle>
@@ -220,7 +263,7 @@ const Airsoft = () => {
             <div className={"container-fluid contact_form_box"} style={style}>
                 <SectionTitle
                     title={"Contactez-nous"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_left"}
                     background={"transparent"}
                 ></SectionTitle>

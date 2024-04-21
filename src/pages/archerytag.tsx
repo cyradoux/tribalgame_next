@@ -9,8 +9,8 @@ import arrows from "../assets/img/archerytag/arrow_archery_tag.png";
 import SectionTitle from "@/components/UI/section-title/section-title";
 import GenericDoubleImages from "@/components/double_img/generic-double-images";
 import ImageStack from "@/components/image-stack/image-stack";
-import airsoft1 from "@/assets/img/airsoft/airsoft1.png";
-import rayure from "@/assets/img/layout/RAYURE_airsoft.svg";
+import archeryTag1 from "@/assets/img/archerytag/archeryTag1.png";
+import rayure from "@/assets/img/layout/RAYURE.svg";
 import player2 from "@/assets/img/airsoft/mask_bg.png";
 import AnimatedBorder from "@/components/UI/animated-border/animated-border";
 
@@ -22,6 +22,7 @@ import slide5 from "../assets/img/archerytag/slides/slide5.png";
 import slide6 from "../assets/img/archerytag/slides/slide6.png";
 import Slider from "@/components/slider/slider";
 import ContactForm from "@/components/contact-form/contact-form";
+import paintball2 from "@/assets/img/paintball/paintball2.png";
 
 const slidesData = [
     { img: slide1.src, title: 'Slide 01', text: 'Lorem ipsum, dolor sit amet consectetur...' },
@@ -33,8 +34,13 @@ const slidesData = [
 ];
 
 const Archerytag = () => {
+    const sectionTitle = {
+        titleBorderColor: "linear-gradient(to bottom, #BF4501 80%, #FF0000 100%)",
+        titleBgColor: "rgba(0,0,0,0)"
+    }
+
     const style = {
-        backgroundImage: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+        backgroundImage: `radial-gradient(circle, rgba(191,69,1, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
         backgroundRepeat: "no-repeat, no-repeat",
         backgroundSize: "cover", // Ajustez selon le besoin
         backgroundAttachment: "fixed",
@@ -43,7 +49,7 @@ const Archerytag = () => {
     }
 
     const style2 = {
-        background: `linear-gradient(to bottom, rgba(33, 34, 38, 1) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player2.src}")`,
+        background: `linear-gradient(to bottom, rgba(191,69,1, 1) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player2.src}")`,
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
         padding: 0
@@ -78,7 +84,7 @@ const Archerytag = () => {
         <>
             {/*-----------  Hero  -------------*/}
             <GenericHero
-                bgColor={""}
+                bgColor={"linear-gradient(to top, rgba(191,69,1,0.2) 80%, rgba(33, 34, 38, 0.1) 100%)"}
                 bgImage={archeryTagBg.src}
                 logo={archerytagLogo.src}
                 playersNb={10}
@@ -90,15 +96,15 @@ const Archerytag = () => {
 
             {/*-----------  Description  -------------*/}
             <section id={"description_bloc"} style={{
-                background: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
-                backgroundRepeat: "no-repeat",
+                background: `radial-gradient(circle, rgba(191,69,1, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+                backgroundRepeat: "no-repeat, no-repeat",
                 backgroundSize: "cover",
                 backgroundAttachment: "fixed"
             }}>
                 <div className={"container-fluid"} >
                     <SectionTitle
                         title={"Un jeu d’adresse et de réflexion"}
-                        borderColor={"var(--color-secondary-airsoft)"}
+                        borderColor={sectionTitle.titleBorderColor}
                         borderPosition={"align_left"}
                         background={'rgba(33,34,38,0)'}
                     ></SectionTitle>
@@ -131,15 +137,16 @@ const Archerytag = () => {
             <section id={"activity"} className={"container-fluid"} style={style}>
                 <SectionTitle
                     title={"Une expérience plébiscitée par les joueurs "}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_right"}
                     background={'transparent'}
                 ></SectionTitle>
                 <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
                     <div className="row content">
                         <ImageStack
-                            frontImg={airsoft1.src}
+                            frontImg={archeryTag1.src}
                             backImg={rayure.src}
+                            backImgAlign={"align_left"}
                         ></ImageStack>
                         <div className="col-md-6">
                             <p>
@@ -154,10 +161,45 @@ const Archerytag = () => {
             </section>
 
             {/*-----------  Immersion  -------------*/}
+            <section id={"activity"} className={"container-fluid"} style={style}>
+                <SectionTitle
+                    title={"Un moment de pur bonheur à partager"}
+                    borderColor={ sectionTitle.titleBorderColor }
+                    borderPosition={"align_left"}
+                    background={"rgba(0,0,0,0.0)"}
+                ></SectionTitle>
+                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
+                    <div className="row content">
+
+                        <div className="col-md-6">
+                            <p>
+                                Vous aurez mille raisons de vous lancer dans une séance d’ArcheryTag. Au-delà de son originalité - nous sommes les seuls à la proposer dans notre région-, si vous cherchez tout simplement à rencontrer d’autres passionnés de jeux réels, vous n’aurez aucun mal à vous intégrer dans une équipe.
+                            </p>
+                            <p>
+                                C’est l’activité idéale pour un anniversaire en famille ou  entre amis, un enterrement de vie de garçon ou de jeune fille ou encore une séance de teambuilding d’entreprise.
+                                Et tout simplement pour passer une excellente journée avec ses amis.
+                            </p>
+                            <p>
+                                C’est l’activité idéale pour un anniversaire en famille ou  entre amis, un enterrement de vie de garçon ou de jeune fille ou encore une séance de teambuilding d’entreprise.
+                                Et tout simplement pour passer une excellente journée avec ses amis.
+                            </p>
+                        </div>
+
+                        <ImageStack
+                            frontImg={archeryTag1.src}
+                            backImg={rayure.src}
+                            backImgAlign={"align_right"}
+                        ></ImageStack>
+                    </div>
+                </div>
+            </section>
+
+            {/*-----------  Immersion  -------------*/}
+            {/*
             <section id={"immersion"} className={"container-fluid"} style={style2}>
                 <SectionTitle
                     title={"Femmes, hommes, enfants, tous fans d’ArcheryTag"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_left"}
                     background={'transparent'}
                 ></SectionTitle>
@@ -177,14 +219,15 @@ const Archerytag = () => {
                     </div>
                 </div>
             </section>
+            *}
 
             {/*-----------  Equipment  -------------*/}
-            <section id={"equipment"} className={"container-fluid"} style={style}>
+            <section id={"equipment"} className={"container-fluid archerytag"} style={style}>
                 <div className={"container-fluid"}>
                     <div className="row">
                         <SectionTitle
                             title={"Conditions et équipement"}
-                            borderColor={"var(--color-secondary-airsoft)"}
+                            borderColor={sectionTitle.titleBorderColor}
                             borderPosition={'align_left'}
                             background={"transparent"}
                         ></SectionTitle>
@@ -206,7 +249,7 @@ const Archerytag = () => {
             <section id={"gallery"} className={"container-fluid"} style={style}>
                 <SectionTitle
                     title={"Galerie Photos"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_right"}
                     background={"transparent"}
                 ></SectionTitle>
@@ -219,7 +262,7 @@ const Archerytag = () => {
             <div className={"container-fluid contact_form_box"} style={style}>
                 <SectionTitle
                     title={"Contactez-nous"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_left"}
                     background={"transparent"}
                 ></SectionTitle>

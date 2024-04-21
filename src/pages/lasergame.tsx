@@ -1,17 +1,12 @@
 import React, {useEffect} from 'react';
-import Hero from "@/components/hero/hero";
-import Circles from "@/components/animations/circles/circles";
-import DoubleImg from "@/components/double_img/double_img";
 import Slider from "@/components/slider/slider";
 import SectionTitle from "@/components/UI/section-title/section-title";
-import airsoftHero from "@/assets/img/airsoft/airsoft2.webp";
-import player1 from "../assets/img/airsoft/player5_bg.png";
 import player2 from "../assets/img/airsoft/mask_bg.png"
 import bg from "../assets/img/layout/bg.png";
 import AnimatedBorder from "@/components/UI/animated-border/animated-border";
 import ImageStack from "@/components/image-stack/image-stack";
-import rayure from "../assets/img/layout/RAYURE_airsoft.svg";
-import airsoft1 from "../assets/img/airsoft/airsoft1.png";
+import rayure from "../assets/img/layout/RAYURE_laser.svg";
+import lasergame1 from "../assets/img/lasergame/lasergame1.png";
 import ContactForm from "@/components/contact-form/contact-form";
 
 import slide1 from "../assets/img/airsoft/slides/slide1.png";
@@ -25,6 +20,7 @@ import lasergameBg from "@/assets/img/lasergame/lasergame_bg_hero.png";
 import lasergameLogo from "@/assets/img/logo/lasergameLogo.svg";
 import GenericDoubleImages from "@/components/double_img/generic-double-images";
 import lasertagWeapons from "@/assets/img/lasergame/lasertag_weapon.png";
+import paintball2 from "@/assets/img/paintball/paintball2.png";
 
 const slidesData = [
     { img: slide1.src, title: 'Slide 01', text: 'Lorem ipsum, dolor sit amet consectetur...' },
@@ -36,8 +32,13 @@ const slidesData = [
 ];
 
 const Lasergame = () => {
+    const sectionTitle = {
+        titleBorderColor: "linear-gradient(to bottom, #FF00F5 0%, #7000FF 100%)",
+        titleBgColor: "rgba(0,0,0,0)"
+    }
+
     const style = {
-        backgroundImage: `radial-gradient(circle, rgba(33, 34, 38, 0.5) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+        backgroundImage: `radial-gradient(circle, rgba(112,0,255,0.2) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
         backgroundRepeat: "no-repeat, no-repeat",
         backgroundSize: "cover", // Ajustez selon le besoin
         backgroundAttachment: "fixed",
@@ -46,7 +47,7 @@ const Lasergame = () => {
     }
 
     const style2 = {
-        background: `linear-gradient(to bottom, rgba(33, 34, 38, 1) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player2.src}")`,
+        background: `linear-gradient(to bottom, rgba(112,0,255,0.2) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player2.src}")`,
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
         padding: 0
@@ -81,7 +82,7 @@ const Lasergame = () => {
         <>
             {/*-----------  Hero  -------------*/}
             <GenericHero
-                bgColor={""}
+                bgColor={"linear-gradient(to top, rgba(112,0,255,0.2) 0%, rgba(33, 34, 38, 0.1) 100%)"}
                 bgImage={lasergameBg.src}
                 logo={lasergameLogo.src}
                 playersNb={10}
@@ -93,15 +94,15 @@ const Lasergame = () => {
 
             {/*-----------  Description  -------------*/}
             <section id={"description_bloc"} style={{
-                background: `radial-gradient(circle, rgba(var(--color-secondary-lasergame), 0.2) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
-                backgroundRepeat: "no-repeat",
+                background: `radial-gradient(circle, rgba(112,0,255,0.2) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+                backgroundRepeat: "no-repeat, no-repeat",
                 backgroundSize: "cover",
                 backgroundAttachment: "fixed"
             }}>
                 <div className={"container-fluid"} >
                     <SectionTitle
                         title={"Bienvenue dans le futur !"}
-                        borderColor={"var(--color-secondary-airsoft)"}
+                        borderColor={sectionTitle.titleBorderColor}
                         borderPosition={"align_left"}
                         background={'rgba(33,34,38,0)'}
                     ></SectionTitle>
@@ -138,15 +139,16 @@ const Lasergame = () => {
             <section id={"activity"} className={"container-fluid"} style={style}>
                 <SectionTitle
                     title={"À chaque partie ses vainqueurs"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_right"}
                     background={'transparent'}
                 ></SectionTitle>
                 <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
                     <div className="row content">
                         <ImageStack
-                            frontImg={airsoft1.src}
+                            frontImg={lasergame1.src}
                             backImg={rayure.src}
+                            backImgAlign={"align_left"}
                         ></ImageStack>
                         <div className="col-md-6">
                             <p>
@@ -168,10 +170,46 @@ const Lasergame = () => {
             </section>
 
             {/*-----------  Immersion  -------------*/}
+            <section id={"activity"} className={"container-fluid"} style={style}>
+                <SectionTitle
+                    title={"Un moment de pur bonheur à partager"}
+                    borderColor={ sectionTitle.titleBorderColor }
+                    borderPosition={"align_left"}
+                    background={"rgba(0,0,0,0.0)"}
+                ></SectionTitle>
+                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
+                    <div className="row content">
+
+                        <div className="col-md-6">
+                            <p>
+                                Pourquoi vous lancer dans une partie de paintball ?
+                                Demandez-le aux dizaines de milliers de joueurs qui vous ont précédé. Retrouvez leurs avis sur Google.
+                            </p>
+                            <p>
+                                Ils ont apprécié la performance sportive, les rires et les frayeurs entre amis, le terrain de jeu incroyablement vaste…
+                                Que ce soit lors d’une séance de teambuilding, d’un anniversaire.
+                            </p>
+                            <p>
+                                C’est l’activité idéale pour un enterrement de vie de garçon ou de filles, pleine de fun
+                                et d’adrénaline nous vous offrirons le scénario du LAPINOU ou d’une sortie entre amis, vous ne serez pas déçu !
+                            </p>
+                        </div>
+
+                        <ImageStack
+                            frontImg={paintball2.src}
+                            backImg={rayure.src}
+                            backImgAlign={"align_right"}
+                        ></ImageStack>
+                    </div>
+                </div>
+            </section>
+
+            {/*-----------  Immersion  -------------*/}
+            {/*
             <section id={"immersion"} className={"container-fluid"} style={style2}>
                 <SectionTitle
                     title={"Le jeu le plus fun, des plus jeunes aux plus expérimentés"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_left"}
                     background={'transparent'}
                 ></SectionTitle>
@@ -190,14 +228,15 @@ const Lasergame = () => {
                     </div>
                 </div>
             </section>
+            */}
 
             {/*-----------  Equipment  -------------*/}
-            <section id={"equipment"} className={"container-fluid"} style={style}>
+            <section id={"equipment"} className={"container-fluid lasergame"} style={style}>
                 <div className={"container-fluid"}>
                     <div className="row">
                         <SectionTitle
                             title={"Conditions et équipement"}
-                            borderColor={"var(--color-secondary-airsoft)"}
+                            borderColor={sectionTitle.titleBorderColor}
                             borderPosition={'align_left'}
                             background={"transparent"}
                         ></SectionTitle>
@@ -219,7 +258,7 @@ const Lasergame = () => {
             <section id={"gallery"} className={"container-fluid"} style={style}>
                 <SectionTitle
                     title={"Galerie Photos"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_right"}
                     background={"transparent"}
                 ></SectionTitle>
@@ -232,7 +271,7 @@ const Lasergame = () => {
             <div className={"container-fluid contact_form_box"} style={style}>
                 <SectionTitle
                     title={"Contactez-nous"}
-                    borderColor={'var(--color-secondary-airsoft)'}
+                    borderColor={sectionTitle.titleBorderColor}
                     borderPosition={"align_left"}
                     background={"transparent"}
                 ></SectionTitle>

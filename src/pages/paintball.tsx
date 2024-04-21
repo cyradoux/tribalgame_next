@@ -10,6 +10,7 @@ import SectionTitle from "@/components/UI/section-title/section-title";
 import GenericDoubleImages from "@/components/double_img/generic-double-images";
 import ImageStack from "@/components/image-stack/image-stack";
 import paintball1 from "@/assets/img/paintball/paintball1.png";
+import paintball2 from "@/assets/img/paintball/paintball2.png";
 import rayure from "@/assets/img/layout/RAYURE_paintball.svg";
 import player2 from "@/assets/img/airsoft/mask_bg.png";
 import AnimatedBorder from "@/components/UI/animated-border/animated-border";
@@ -36,8 +37,6 @@ const Paintball = () => {
         titleBorderColor: "linear-gradient(to bottom, #FF0000 0%, #3300FF 100%)",
         titleBgColor: "rgba(0,0,0,0)"
     }
-    const titleBorderColor = "linear-gradient(to bottom, #FF0000 0%, #3300FF 100%)";
-
 
     const style = {
         backgroundImage: `radial-gradient(circle, rgba(255,0,0, 0.3) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
@@ -96,7 +95,7 @@ const Paintball = () => {
 
             {/*-----------  Description  -------------*/}
             <section id={"description_bloc"} style={{
-                backgroundImage: `radial-gradient(circle, rgba(255,0,0,0.1) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
+                backgroundImage: `radial-gradient(circle, rgba(255,0,0, 0.3) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundAttachment: "fixed"
@@ -148,6 +147,7 @@ const Paintball = () => {
                         <ImageStack
                             frontImg={paintball1.src}
                             backImg={rayure.src}
+                            backImgAlign={"align_left"}
                         ></ImageStack>
                         <div className="col-md-6">
                             <p>
@@ -167,16 +167,17 @@ const Paintball = () => {
             </section>
 
             {/*-----------  Immersion  -------------*/}
-            <section id={"immersion"} className={"container-fluid"} style={style}>
+            <section id={"activity"} className={"container-fluid"} style={style}>
                 <SectionTitle
                     title={"Un moment de pur bonheur à partager"}
                     borderColor={ sectionTitle.titleBorderColor }
                     borderPosition={"align_left"}
-                    background={'transparent'}
+                    background={"rgba(0,0,0,0.0)"}
                 ></SectionTitle>
-                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-start"}}>
+                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
                     <div className="row content">
-                        <div className="col-md-12">
+
+                        <div className="col-md-6">
                             <p>
                                 Pourquoi vous lancer dans une partie de paintball ?
                                 Demandez-le aux dizaines de milliers de joueurs qui vous ont précédé. Retrouvez leurs avis sur Google.
@@ -190,6 +191,12 @@ const Paintball = () => {
                                 et d’adrénaline nous vous offrirons le scénario du LAPINOU ou d’une sortie entre amis, vous ne serez pas déçu !
                             </p>
                         </div>
+
+                        <ImageStack
+                            frontImg={paintball2.src}
+                            backImg={rayure.src}
+                            backImgAlign={"align_right"}
+                        ></ImageStack>
                     </div>
                 </div>
             </section>
@@ -201,7 +208,7 @@ const Paintball = () => {
                         <SectionTitle
                             title={"Conditions et équipement"}
                             borderColor={ sectionTitle.titleBorderColor }
-                            borderPosition={'align_left'}
+                            borderPosition={'align_right'}
                             background={"transparent"}
                         ></SectionTitle>
                         <div className={"col-md-12 equipment_content"}>
@@ -223,7 +230,7 @@ const Paintball = () => {
                 <SectionTitle
                     title={"Galerie Photos"}
                     borderColor={ sectionTitle.titleBorderColor }
-                    borderPosition={"align_right"}
+                    borderPosition={"align_left"}
                     background={"transparent"}
                 ></SectionTitle>
                 <Slider
@@ -236,7 +243,7 @@ const Paintball = () => {
                 <SectionTitle
                     title={"Contactez-nous"}
                     borderColor={ sectionTitle.titleBorderColor }
-                    borderPosition={"align_left"}
+                    borderPosition={"align_right"}
                     background={"transparent"}
                 ></SectionTitle>
                 <ContactForm/>

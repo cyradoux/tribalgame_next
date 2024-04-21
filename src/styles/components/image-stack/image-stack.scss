@@ -1,14 +1,23 @@
 .image_stack {
 	display: flex;
 	position: relative;
+	justify-content: center;
 }
 
-.stack_back {
+.stack_back.align_left {
 	height: 100%;
 	z-index: 1;
 	position: absolute;
 	top: 20px;
 	left: 30px;
+}
+
+.stack_back.align_right {
+	height: 100%;
+	z-index: 1;
+	position: absolute;
+	top: 20px;
+	right: 30px;
 }
 
 .stack_front {
