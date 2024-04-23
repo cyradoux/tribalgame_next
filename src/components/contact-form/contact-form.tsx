@@ -57,14 +57,14 @@ const ContactForm = () => {
 
     return (
         <>
-            <section className={ classes.contact } data-aos={"fade-up"} data-aos-delay={"100"}>
-                <div className="container" data-aos="fade-up">
+            <section className={ classes.contact }>
+                <div className="container">
                     <div className="row gx-lg-0 gy-4">
 
                         <div className="col-lg-12">
                             <form onSubmit={handleSubmit} role="form" className={ classes.email_form }>
                                 <div className="row">
-                                    <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}  data-aos={"fade-up"} data-aos-delay={"150"}>
+                                    <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}>
                                         <Input
                                             id={"lastname"}
                                             label={"Nom"}
@@ -82,7 +82,7 @@ const ContactForm = () => {
                                             : <p className={classes.required }>Champs obligatoire</p>
                                         }
                                     </div>
-                                    <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}  data-aos={"fade-up"} data-aos-delay={"200"}>
+                                    <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}>
                                         <Input
                                             id={"firstname"}
                                             label={"Prénom"}
@@ -102,7 +102,7 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="row">
-                                    <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}  data-aos={"fade-up"} data-aos-delay={"250"}>
+                                    <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}>
                                         <Input
                                             id={"email"}
                                             label={"Email"}
@@ -117,7 +117,7 @@ const ContactForm = () => {
                                             ? <p className={ classes.input_error_message }>L'email saisi n'est pas conforme</p>
                                             : <p className={classes.required }>Champs obligatoire</p>}
                                     </div>
-                                    <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}  data-aos={"fade-up"} data-aos-delay={"300"}>
+                                    <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}>
                                         <Input
                                             id={"tel"}
                                             label={"Téléphone"}
@@ -134,7 +134,7 @@ const ContactForm = () => {
                                     </div>
                                 </div>
 
-                                <div className={`mt-3 ${ classes.form_group } ${ classes.inputBox }`}  data-aos={"fade-up"} data-aos-delay={"350"}>
+                                <div className={`mt-3 ${ classes.form_group } ${ classes.inputBox }`}>
                                     <Input
                                         id={"subject"}
                                         label={"Sujet"}
@@ -151,7 +151,7 @@ const ContactForm = () => {
                                         ? <p className={ classes.input_error_message }>Le sujet que vous avez saisi n'est pas conforme</p>
                                         : <p className={classes.required }>Champs obligatoire</p> }
                                 </div>
-                                <div className={`mt-3 ${ classes.form_group } ${ classes.inputBox }`}  data-aos={"fade-up"} data-aos-delay={"400"}>
+                                <div className={`mt-3 ${ classes.form_group } ${ classes.inputBox }`}>
                                     <Textarea
                                         id={"message"}
                                         label={"Message"}
@@ -170,7 +170,7 @@ const ContactForm = () => {
                                         : <p className={classes.required }>Champs obligatoire</p>}
                                 </div>
 
-                                <div className={`mt-3 form-check`}  data-aos={"fade-up"} data-aos-delay={"400"} >
+                                <div className={`mt-3 form-check`} >
                                     <Checkbox
                                         id={"consentement"}
                                         type={"checkbox"}

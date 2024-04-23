@@ -42,8 +42,7 @@ const Airsoft = () => {
         backgroundRepeat: "no-repeat, no-repeat",
         backgroundSize: "cover", // Ajustez selon le besoin
         backgroundAttachment: "fixed",
-        padding: 0,
-        minHeight: "100vh"
+        height: "100%"
     }
 
     const style2 = {
@@ -128,7 +127,7 @@ const Airsoft = () => {
                     borderPosition={"align_right"}
                     background={'transparent'}
                 ></SectionTitle>
-                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
+                <div className={"container"} style={{marginTop: "5rem", display: "flex"}}>
                     <div className="row content">
                         <ImageStack
                             frontImg={airsoft1.src}
@@ -163,7 +162,7 @@ const Airsoft = () => {
                     borderPosition={"align_left"}
                     background={"rgba(0,0,0,0.0)"}
                 ></SectionTitle>
-                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
+                <div className={"container"} style={{marginTop: "5rem", display: "flex"}}>
                     <div className="row content">
 
                         <div className="col-md-6">

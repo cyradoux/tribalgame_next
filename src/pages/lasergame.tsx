@@ -42,15 +42,13 @@ const Lasergame = () => {
         backgroundRepeat: "no-repeat, no-repeat",
         backgroundSize: "cover", // Ajustez selon le besoin
         backgroundAttachment: "fixed",
-        padding: 0,
-        minHeight: "100vh"
+        height: "100%"
     }
 
     const style2 = {
         background: `linear-gradient(to bottom, rgba(112,0,255,0.2) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player2.src}")`,
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
-        padding: 0
     }
 
     useEffect(() => {
@@ -143,7 +141,7 @@ const Lasergame = () => {
                     borderPosition={"align_right"}
                     background={'transparent'}
                 ></SectionTitle>
-                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
+                <div className={"container"} style={{marginTop: "5rem", display: "flex"}}>
                     <div className="row content">
                         <ImageStack
                             frontImg={lasergame1.src}
@@ -177,7 +175,7 @@ const Lasergame = () => {
                     borderPosition={"align_left"}
                     background={"rgba(0,0,0,0.0)"}
                 ></SectionTitle>
-                <div className={"container"} style={{marginTop: "5rem", display: "flex",justifyContent: "flex-end"}}>
+                <div className={"container"} style={{marginTop: "5rem", display: "flex"}}>
                     <div className="row content">
 
                         <div className="col-md-6">

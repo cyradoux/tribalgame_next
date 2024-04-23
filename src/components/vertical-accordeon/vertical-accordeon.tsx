@@ -56,8 +56,6 @@ const VerticalAccordeon = () => {
         backgroundSize: "cover, cover"
     }
 
-
-
     return (
         <>
             <div id="image_accordeon" className="wrapper">

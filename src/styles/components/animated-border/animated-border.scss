@@ -93,8 +93,14 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 5em 15em;
 	font-family: var(--font-fourth);
 	color: #fff;
 	font-size: 1.7rem;
+	padding: 5px;
+}
+
+@media screen and (max-width: 1280px){
+	.animated_border_box{
+		width: 100%;
+	}
 }

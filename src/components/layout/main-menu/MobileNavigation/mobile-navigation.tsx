@@ -45,10 +45,6 @@ const MobileNavigation = () => {
                         </li>
 
                         <li className="nav-item">
-                            <Link onClick={handleClickMobileMenu} className="nav-link" href="/apropos">A propos</Link>
-                        </li>
-
-                        <li className="nav-item">
                             <Link onClick={handleClickMobileMenu} className="nav-link" href="/contact">Contact</Link>
                         </li>
                     </ul>

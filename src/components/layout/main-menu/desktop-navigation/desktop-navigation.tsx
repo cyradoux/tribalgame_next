@@ -18,7 +18,6 @@ const DesktopNavigation = () => {
                     <li><Link href="/archerytag" className={`${router.pathname === "/archerytag" ? "active" : ""}`}>Archery-tag</Link></li>
                     <li><Link href="/lasergame" className={`${router.pathname === "/lasergame" ? "active" : ""}`}>Lasergame</Link></li>
                     <li><Link href="/paintball" className={`${router.pathname === "/paintball" ? "active" : ""}`}>Paintball</Link></li>
-                    <li><Link href="/apropos" className={`${router.pathname === "/apropos" ? "active" : ""}`}>Qui sommes nous ?</Link></li>
                     <li><Link href="/contact" className={`${router.pathname === "/contact" ? "active" : ""}`}>Contact</Link></li>
                 </ul>
             </nav>

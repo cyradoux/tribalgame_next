@@ -44,7 +44,7 @@ body{
 }
 
 section{
-	padding: 0 300px;
+	padding: 100px 300px;
 }
 
 a {
@@ -59,7 +59,6 @@ a {
 	align-items: center;
 	
 	.container{
-		height: 100vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -155,6 +154,7 @@ a {
 		font-size: 1.7rem;
 		//max-width: 600px;
 		font-family: var(--font-fourth);
+		overflow: hidden;
 	}
 }
 
@@ -199,4 +199,28 @@ a {
 .contact_form_box
 {
 	color: #fff;
+}
+
+/*------------------    Values    -----------------*/
+#values{
+	.values_content{
+		color: #fff;
+		font-family: var(--font-fourth);
+		font-size: 1.7em;
+		margin: 100px 0;
+		padding: 81px 60px;
+	}
+}
+
+/*------------------    Media Query   ---------------*/
+@media screen and (max-width: 1280px){
+	section{
+		padding: 20px 0;
+	}
+	
+	.section_title{
+		h2{
+			font-size: 2em;
+		}
+	}
 }
