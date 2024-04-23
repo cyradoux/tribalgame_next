@@ -38,14 +38,14 @@
 }
 
 .block1 {
-	background-image: url(http://i.imgur.com/Etx8s9g.jpg);
+	/*background-image: url(http://i.imgur.com/Etx8s9g.jpg);*/
 	background-size: cover;
 	background-position: center;
 	-webkit-background-size: cover;
 }
 
 .block2 {
-	background-image: url(http://i.imgur.com/X5CqPG8.jpg);
+	/*background-image: url(http://i.imgur.com/X5CqPG8.jpg);*/
 	background-size: cover;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -60,13 +60,6 @@
 
 .block4 {
 	background-image: url(http://i.imgur.com/JuyX2h2.jpg);
-	background-size: cover;
-	background-position: center;
-	-webkit-background-size: cover;
-}
-
-.block5 {
-	background-image: url(http://i.imgur.com/s4WkGRu.jpg);
 	background-size: cover;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -201,7 +194,148 @@
 					overflow: hidden;
 				}
 			}
+			
+			.accordeon_btn_groups{
+				position: absolute;
+				bottom: 30px;
+				left: 20px;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.5s ease, visibility 0.5s;
+				
+				ul{
+					li{
+						list-style: none;
+						margin-bottom: 10px;
+						display: flex;
+						
+						a{
+							display: block;
+							color: #fff;
+							width: 200px;
+							height: 50px;
+							padding: 15px 5px;
+							text-transform: uppercase;
+							font-family: var(--font-fourth);
+							transition: ease 0.5s;
+						}
+					}
+				}
+				text-decoration: none;
+				color: #fff;
+			}
+			
+			.accordeon_start_btn{
+				position: absolute;
+				bottom: 165px;
+				right: 20px;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.5s ease, visibility 0.5s;
+				
+				a{
+					display: block;
+					color: #000;
+					text-transform: uppercase;
+					font-family: var(--font-fourth);
+					background: rgb(242, 199, 41);
+					width: 200px;
+					height: 50px;
+					padding: 15px 5px;
+					transition: ease 0.5s;
+				}
+			}
+			
+			.accordeon_btn_groups.visible{
+				opacity: 1;
+				visibility: visible;
+				transition: opacity 0.5s ease, visibility 0.5s;
+			}
+			
+			.accordeon_start_btn.visible{
+				opacity: 1;
+				visibility: visible;
+				transition: opacity 0.5s ease, visibility 0.5s;
+			}
+			
+			
+			
+			/*-----------   Air soft   ----------*/
+			.airsoft_column.accordeon_btn_groups ul li a {
+				background: #1B1D15;
+				
+				&:hover{
+					background: #333E25;
+					transition: ease 0.5s;
+				}
+			}
+			
+			.airsoft_column.accordeon_start_btn
+			{
+				a{
+					&:hover{
+						color: #fff;
+						background: #333E25;
+						transition: ease 0.5s;
+					}
+				}
+				
+			}
 		}
 		
 	}
 }
+
+/*---------     Media  Query    ---------*/
+@media screen and (max-width: 1280px) {
+	#image_accordeon{
+		.block{
+			height: 100vh;
+			
+			.block-w{
+				height: 25%;
+				width: 100%;
+				
+				.text{
+					padding-top: 0;
+					
+					.accordeon_back{
+						top: 300px;
+						left: 40px;
+					}
+					
+					.accordeon_logo_box{
+						top: 20px;
+					}
+					
+					.player_img{
+						display: block;
+					}
+				}
+				
+				&.active{
+					height: 100vh;
+					
+					.text{
+						padding-top: 50px;
+					}
+				}
+				
+				&.min.mobile_closed{
+					height: 0;
+				}
+				
+				&.min{
+					.text{
+						.player_img{
+							display: none;
+							transition: ease 1s;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
