@@ -212,10 +212,10 @@ const Paintball = () => {
                         <div className={"col-md-12 equipment_content"}>
                             <AnimatedBorder>
                                 <p>
-                                    Pour nous rejoindre, rien de plus simple il vous suffit d'avoir entre 8 ans pour le laser et 16ans pour le l'airsoft.
+                                    Pour nous rejoindre, rien de plus simple il vous suffit d&apos;avoir entre 8 ans pour le laser et 16ans pour le l&apos;airsoft.
                                 </p>
                                 <p>
-                                    Au niveau de l'équipement vous pouvez apporter votre équipement ou en louer sur place.
+                                    Au niveau de l&apos;équipement vous pouvez apporter votre équipement ou en louer sur place.
                                 </p>
                             </AnimatedBorder>
                         </div>

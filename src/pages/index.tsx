@@ -119,8 +119,8 @@ export default function Home() {
                         <div className="col-md-6">
                             <h5 style={{fontSize: "1.7em", marginBottom: "1em"}}>Nous sommes tribal, l’association  de jeu  de tir  pour  tous !</h5>
                             <p>
-                                tribal c’est un terrain de 45 hectares est un max d’adrénaline.
-                                Nous pouvons accueillir tout type d'événement  ( séminaires, enterrement de vie de garçon et jeune fille, anniversaire etc )
+                                tribal c&apos;est un terrain de 45 hectares est un max d&apos;adrénaline.
+                                Nous pouvons accueillir tout type d&apos;événement  ( séminaires, enterrement de vie de garçon et jeune fille, anniversaire etc )
                                 alors prenez vos répliques pour une ou plusieurs heures de jeu.
                             </p>
                         </div>
@@ -202,8 +202,8 @@ export default function Home() {
                         <div className={"col-12 values_content"} style={{backgroundImage: `url(${bgWithBg.src})`, backgroundSize: "cover"}}>
                             <p>
                                 Chez Tribal nous sommes engagés pour l’inclusivité!
-                                Encore aujourd’hui les jeux de tirs( Airsoft, Paintball, lasergame,Archery-tag) ont malheureusement une image d'activité très masculine…
-                                Nous nous battons pour que cela change; chez nous tout le monde peut venir s’amuser quel que soit le sexe ou même l’âge !
+                                Encore aujourd&apos;hui les jeux de tirs( Airsoft, Paintball, lasergame,Archery-tag) ont malheureusement une image d&apos;activité très masculine…
+                                Nous nous battons pour que cela change; chez nous tout le monde peut venir s&apos;amuser quel que soit le sexe ou même l&apos;âge !
                             </p>
                         </div>
                     </div>
@@ -227,7 +227,7 @@ export default function Home() {
                             backImgAlign={"align_left"}
                         ></ImageStack>
                         <div className="col-md-6">
-                            <h5 style={{fontSize: "1.2em"}}>Chemin d'Antoing - 7500 Tournai - Belgique</h5>
+                            <h5 style={{fontSize: "1.2em"}}>Chemin d&apos;Antoing - 7500 Tournai - Belgique</h5>
                             <img src={basemap.src} alt=""/>
                         </div>
                     </div>

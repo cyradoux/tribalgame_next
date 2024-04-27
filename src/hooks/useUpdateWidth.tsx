@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export const updateWidth = () => {
+export const useUpdateWidth = () => {
     const [windowWidth, setWindowWidth] = useState(100);
 
     useEffect(() => {

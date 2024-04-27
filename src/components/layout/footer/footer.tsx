@@ -15,7 +15,7 @@ const Footer = () => {
                                 <div className={"tribal_coor"}>
                                     <p>04 95 86 42 78</p>
                                     <p>exemple.exemple@gmail.com</p>
-                                    <p>Chemin d'Antoing - 7500 Tournai - Belgique</p>
+                                    <p>Chemin d&apos;Antoing - 7500 Tournai - Belgique</p>
                                 </div>
 
                             </div>

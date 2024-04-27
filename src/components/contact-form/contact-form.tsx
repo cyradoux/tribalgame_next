@@ -114,7 +114,7 @@ const ContactForm = () => {
                                             value={enteredEmail}
                                         />
                                         {hasEmailError
-                                            ? <p className={ classes.input_error_message }>L'email saisi n'est pas conforme</p>
+                                            ? <p className={ classes.input_error_message }>L&apos;email saisi n&apos;est pas conforme</p>
                                             : <p className={classes.required }>Champs obligatoire</p>}
                                     </div>
                                     <div className={`col-md-6 ${ classes.form_group } ${ classes.inputBox }`}>
@@ -129,7 +129,7 @@ const ContactForm = () => {
                                             value={enteredTel}
                                         />
                                         {hasTelError
-                                            ? <p className={ classes.input_error_message }>Le numéro de téléphone saisi n'est pas conforme au numéro de téléphone français </p>
+                                            ? <p className={ classes.input_error_message }>Le numéro de téléphone saisi n&apos;est pas conforme au numéro de téléphone français </p>
                                             : <p className={classes.required }>Champs obligatoire</p>}
                                     </div>
                                 </div>
@@ -148,7 +148,7 @@ const ContactForm = () => {
                                         maxlength="50"
                                     />
                                     { hasSubjectError
-                                        ? <p className={ classes.input_error_message }>Le sujet que vous avez saisi n'est pas conforme</p>
+                                        ? <p className={ classes.input_error_message }>Le sujet que vous avez saisi n&apos;est pas conforme</p>
                                         : <p className={classes.required }>Champs obligatoire</p> }
                                 </div>
                                 <div className={`mt-3 ${ classes.form_group } ${ classes.inputBox }`}>
@@ -185,7 +185,7 @@ const ContactForm = () => {
 
                                 <div className="my-3">
                                     { error && <div className={ classes.error_message }>Une erreur est survenue. Veuillez essayer ultérieurement ou me contacter par téléphone.</div> }
-                                    { isSuccess && <div className={ classes.sent_message }>Votre message a été envoyé! Je vous contacterez bientôt. Merci!</div> }
+                                    { isSuccess && <div className={ classes.sent_message }>Votre message a été envoyé! Merci!</div> }
                                     { !isLoading && !isSuccess && !error &&
                                         <div className="text-center" >
                                             <button type="submit">Envoyer</button>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import clsx from "clsx";
+import {preventDefault, blockScroll, unblockScroll} from "@/utils/scrollBlocker";
 
 import arrow from "../../assets/img/icones/Arrow.webp";
 
@@ -30,11 +31,14 @@ const VerticalAccordeon = () => {
     const handleClickBlock = (blockName: string) => {
         setActiveBlock(blockName);
         setExtended(true);
+        window.scrollTo(0,0);
+        blockScroll();
     }
 
     const handleClickBack = () => {
         setActiveBlock("");
         setExtended(false);
+        unblockScroll();
     }
 
     const styleAirsoft = {

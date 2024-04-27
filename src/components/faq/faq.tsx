@@ -23,7 +23,7 @@ const Faq = ({faqItems}: FaqPropsType) => {
 
                             {
                                 faqItems.map((item, i) => (
-                                    <div className={'accordion_item'}>
+                                    <div className={'accordion_item'} key={i}>
                                         <h3 className="accordion-header">
                                             <button className={`collapsed accordion_button`} type="button" data-bs-toggle="collapse" data-bs-target={`#faq-content-${i}`}>
                                                 <span className={'num'}>

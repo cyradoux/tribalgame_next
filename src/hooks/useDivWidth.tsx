@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
 
-const ComponentWithDivSize = ({ divRef }: any) => {
+const useComponentWithDivSize = ({ divRef }: any) => {
   const [divSize, setDivSize] = useState({ width: 0 });
 
   useLayoutEffect(() => {
@@ -23,4 +23,4 @@ const ComponentWithDivSize = ({ divRef }: any) => {
   return divSize.width
 };
 
-export default ComponentWithDivSize;
+export default useComponentWithDivSize;

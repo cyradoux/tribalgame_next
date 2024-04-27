@@ -109,15 +109,15 @@ const Lasergame = () => {
                             <div className={"col-md-6 description_box"}>
                                 <p>
                                     Pénétrez Evoluez avec votre équipe sur un terrain adapté, dans l’obscurité d’un labyrinthe inquiétant. muni de votre blaster,
-                                    d’un bandeau réflecteur et surtout d'un bracelet shock plastron et de votre revolver laser, votre mission est simple :
+                                    d&apos;un bandeau réflecteur et surtout d&apos;un bracelet shock plastron et de votre revolver laser, votre mission est simple :
                                     réussir à marquer un maximum de points et à laisser l’équipe adverse sur le carreau.
                                 </p>
                                 <p>
                                     Pour ce faire, un seul moyen : tirer le premier, bien viser les réflecteurs ou le blaster plastron de l’ennemi… et éviter d’être vous-même atteint.
-                                    Attention : les miroirs ne sont pas vos amis  les bracelets shock délivrent une DECHARGE ELECTRIQUE lorsqu'un adversaire vise votre bandeau ou votre blaster !
+                                    Attention : les miroirs ne sont pas vos amis  les bracelets shock délivrent une DECHARGE ELECTRIQUE lorsqu&apos;un adversaire vise votre bandeau ou votre blaster !
                                 </p>
                                 <p>
-                                    Selon l'âge et votre témérité, vous choisirez entre une simple vibration ou une décharge allant du niveau 1 à 5!
+                                    Selon l&apos;âge et votre témérité, vous choisirez entre une simple vibration ou une décharge allant du niveau 1 à 5!
                                     Proposant des équipements de dernière génération, le lasergame Laser Tag de TRIBAL Games est est une expérience unique, immersive et qui vous fera pousser des cris.
                                     De frayeur ou de joie ? À vous de voir !
                                 </p>
@@ -241,10 +241,10 @@ const Lasergame = () => {
                         <div className={"col-md-12 equipment_content"}>
                             <AnimatedBorder>
                                 <p>
-                                    Pour nous rejoindre, rien de plus simple il vous suffit d'avoir entre 8 ans pour le laser et 16ans pour le l'airsoft.
+                                    Pour nous rejoindre, rien de plus simple il vous suffit d&apos;avoir entre 8 ans pour le laser et 16ans pour le l&apos;airsoft.
                                 </p>
                                 <p>
-                                    Au niveau de l'équipement vous pouvez apporter votre équipement ou en louer sur place.
+                                    Au niveau de l&apos;équipement vous pouvez apporter votre équipement ou en louer sur place.
                                 </p>
                             </AnimatedBorder>
                         </div>
