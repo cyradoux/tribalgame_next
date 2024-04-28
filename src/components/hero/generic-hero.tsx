@@ -28,22 +28,26 @@ const GenericHero = ({bgColor, bgImage, logo, playersNb, minAge, duration, title
                     <div className="content">
                         <img src={ logo } alt="logo" className="movieTitle"/>
                         <h2>{ title }</h2>
+                        {/*
                         <h4>
                             <span>2020</span>
                             <span>12+</span>
                             <span>1h 55min</span>
                             <span>Action</span>
                         </h4>
+                        */}
                         <p>
                             { subTitle }
                         </p>
+                        {/*
                         <div className="buttons">
-                            {/*<a href="#"><i className="fa fa-play" aria-hidden="true"></i>Play</a>*/}
+                            <a href="#"><i className="fa fa-play" aria-hidden="true"></i>Play</a>
                             <a href="#"><i className="fa fa-plus" aria-hidden="true"></i>Réserver</a>
                         </div>
+                        */}
                     </div>
-                    <a href="" className="play">
-                        Regarder <img src={arrow.src} alt="icone de flèche de tribal.fr"/>
+                    <a href="#contact" className="play">
+                        Réserver <img src={arrow.src} alt="icone de flèche de tribal.fr"/>
                     </a>
                 </div>
             </div>

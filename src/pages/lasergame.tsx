@@ -21,6 +21,7 @@ import lasergameLogo from "@/assets/img/logo/lasergameLogo.svg";
 import GenericDoubleImages from "@/components/double_img/generic-double-images";
 import lasertagWeapons from "@/assets/img/lasergame/lasertag_weapon.png";
 import paintball2 from "@/assets/img/paintball/paintball2.png";
+import {unblockScroll} from "@/utils/scrollBlocker";
 
 const slidesData = [
     { img: slide1.src, title: 'Slide 01', text: 'Lorem ipsum, dolor sit amet consectetur...' },
@@ -74,6 +75,7 @@ const Lasergame = () => {
         `;
         const head = document.querySelector("head");
         head!.appendChild(style);
+        unblockScroll();
     }, []);
 
     return (
@@ -266,7 +268,7 @@ const Lasergame = () => {
             </section>
 
             {/*-----------  Contact Form  -------------*/}
-            <div className={"container-fluid contact_form_box"} style={style}>
+            <div id="contact" className={"container-fluid contact_form_box"} style={style}>
                 <SectionTitle
                     title={"Contactez-nous"}
                     borderColor={sectionTitle.titleBorderColor}

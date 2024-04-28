@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import SectionTitle from "@/components/UI/section-title/section-title";
 import ContactForm from "@/components/contact-form/contact-form";
 import bg from "@/assets/img/layout/layout_assault.png";
+import {unblockScroll} from "@/utils/scrollBlocker";
 
 const Contact = () => {
     const style = {
@@ -13,6 +14,10 @@ const Contact = () => {
         minHeight: "100vh",
         marginTop: "200px"
     }
+
+    useEffect(() => {
+        unblockScroll()
+    }, []);
 
     return (
         <>

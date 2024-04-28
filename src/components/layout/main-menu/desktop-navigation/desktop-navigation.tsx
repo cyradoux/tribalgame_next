@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LuChevronDown } from "react-icons/lu";
 import {useRouter} from "next/router";
 import logo from "../../../../assets/img/logo/logo.png";
+import { unblockScroll } from "../../../../utils/scrollBlocker";
 
 const DesktopNavigation = () => {
     const router = useRouter();
@@ -14,11 +15,11 @@ const DesktopNavigation = () => {
             </Link>
             <nav id="navbar" className="navbar">
                 <ul>
-                    <li><Link href="/airsoft" className={`${router.pathname === "/airsoft" ? "active" : ""}`}>Airsoft</Link></li>
-                    <li><Link href="/archerytag" className={`${router.pathname === "/archerytag" ? "active" : ""}`}>Archery-tag</Link></li>
-                    <li><Link href="/lasergame" className={`${router.pathname === "/lasergame" ? "active" : ""}`}>Lasergame</Link></li>
-                    <li><Link href="/paintball" className={`${router.pathname === "/paintball" ? "active" : ""}`}>Paintball</Link></li>
-                    <li><Link href="/contact" className={`${router.pathname === "/contact" ? "active" : ""}`}>Contact</Link></li>
+                    <li><Link href="/airsoft" onClick={unblockScroll} className={`${router.pathname === "/airsoft" ? "active" : ""}`}>Airsoft</Link></li>
+                    <li><Link href="/archerytag" onClick={unblockScroll} className={`${router.pathname === "/archerytag" ? "active" : ""}`}>Archery-tag</Link></li>
+                    <li><Link href="/lasergame" onClick={unblockScroll} className={`${router.pathname === "/lasergame" ? "active" : ""}`}>Lasergame</Link></li>
+                    <li><Link href="/paintball" onClick={unblockScroll} className={`${router.pathname === "/paintball" ? "active" : ""}`}>Paintball</Link></li>
+                    <li><Link href="/contact" onClick={unblockScroll} className={`${router.pathname === "/contact" ? "active" : ""}`}>Contact</Link></li>
                 </ul>
             </nav>
         </>

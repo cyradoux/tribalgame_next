@@ -23,6 +23,7 @@ import slide5 from "../assets/img/archerytag/slides/slide5.png";
 import slide6 from "../assets/img/archerytag/slides/slide6.png";
 import Slider from "@/components/slider/slider";
 import ContactForm from "@/components/contact-form/contact-form";
+import {unblockScroll} from "@/utils/scrollBlocker";
 
 const slidesData = [
     { img: slide1.src, title: 'Slide 01', text: 'Lorem ipsum, dolor sit amet consectetur...' },
@@ -75,6 +76,7 @@ const Paintball = () => {
         `;
         const head = document.querySelector("head");
         head!.appendChild(style);
+        unblockScroll();
     }, []);
 
     return (
@@ -237,7 +239,7 @@ const Paintball = () => {
             </section>
 
             {/*-----------  Contact Form  -------------*/}
-            <div className={"container-fluid contact_form_box"} style={style}>
+            <div id="contact" className={"container-fluid contact_form_box"} style={style}>
                 <SectionTitle
                     title={"Contactez-nous"}
                     borderColor={ sectionTitle.titleBorderColor }

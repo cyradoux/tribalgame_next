@@ -28,22 +28,25 @@ const Hero = () => {
                     <div className="content">
                         <img src={aisoftLogo.src} alt="logo" className="movieTitle"/>
                         <h2>Retrouvez les sensations de votre enfance grandeur nature dans une partie d’Airsoft</h2>
-                        <h4>
-                            <span>2020</span>
-                            <span>12+</span>
-                            <span>1h 55min</span>
-                            <span>Action</span>
-                        </h4>
+                        {/*
+                            <h4>
+                                <span>2020</span>
+                                <span>12+</span>
+                                <span>1h 55min</span>
+                                <span>Action</span>
+                            </h4>
+                        */}
                         <p>
                             Frissons et rires garantis en Wallonie avec l’Airsoft, jeu de plein air où l’on s’affronte avec des répliques et billes biodégradables.
                         </p>
-                        <div className="buttons">
-                            {/*<a href="#"><i className="fa fa-play" aria-hidden="true"></i>Play</a>*/}
-                            <a href="#"><i className="fa fa-plus" aria-hidden="true"></i>Réserver</a>
-                        </div>
+                        {/*
+                            <div className="buttons">
+                                <a href="#"><i className="fa fa-plus" aria-hidden="true"></i>Réserver</a>
+                            </div>
+                        */}
                     </div>
-                    <a href="" className="play">
-                        Regarder <img src={arrow.src} alt=""/>
+                    <a href="#contact" className="play">
+                        Réserver <img src={arrow.src} alt=""/>
                     </a>
                 </div>
             </div>
