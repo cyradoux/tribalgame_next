@@ -85,7 +85,7 @@ const VerticalAccordeon = () => {
                             <>
                                 {/*--------   TONNEAUX   -------*/}
                                 <div className={clsx({"appariation_fade": extended && activeBlock === "block1"})} style={{position: "absolute", right: "-30px", bottom: "0", height: "150px", zIndex: "6"}}>
-                                    <img src={tonneau.src} className={parallaxSelector} data-speed={"2"} alt="terrain d'airsoft"/>
+                                    <img src={tonneau.src} className={parallaxSelector} data-speed={"1"} alt="terrain d'airsoft"/>
                                 </div>
 
                                 {/*--------   CABANE   -------*/}
@@ -104,8 +104,8 @@ const VerticalAccordeon = () => {
                                 </div>
 
                                 {/*--------   BACKGROUND   -------*/}
-                                <div className={clsx("parallax_bg",{"appariation_fade": extended && activeBlock === "block1"})} style={{position: "absolute", width: "100vw",top: "0", left: "-50px", zIndex: "1"}}>
-                                    <img src={warzoneBg.src} style={{width: "105vw"}} className={parallaxSelector} data-speed={"2"} alt="terrain d'airsoft"/>
+                                <div className={clsx("parallax_bg",{"appariation_fade": extended && activeBlock === "block1"})} style={{position: "absolute", width: "100vw",top: "-50px", left: "-50px", zIndex: "1"}}>
+                                    <img src={warzoneBg.src} style={{width: "105vw"}} className={parallaxSelector} data-speed={"3.5"} alt="terrain d'airsoft"/>
                                 </div>
                             </>
                         }
@@ -126,7 +126,7 @@ const VerticalAccordeon = () => {
                                 </div>
 
                                 <div className={"player_img"} style={{position: "absolute", bottom: "0",zIndex: "4"}}>
-                                    <img src={airsoftPlayer.src} className={parallaxSelector} data-speed={"-1"} alt="image d'un joueur d'airsoft"/>
+                                    <img src={airsoftPlayer.src} alt="image d'un joueur d'airsoft"/>
                                 </div>
                                 
                                 <div className={clsx("airsoft_column accordeon_btn_groups", {"visible": extended && activeBlock === "block1"})}>
@@ -154,7 +154,7 @@ const VerticalAccordeon = () => {
                             <>
                                 {/*--------   TONNEAUX   -------*/}
                                 <div className={clsx({"appariation_fade": extended && activeBlock === "block2"})} style={{position: "absolute", right: "-30px", bottom: "0", height: "150px", zIndex: "6"}}>
-                                    <img src={tonneau.src} className={parallaxSelector} data-speed={"2"} alt="terrain d'airsoft"/>
+                                    <img src={tonneau.src} className={parallaxSelector} data-speed={"1"} alt="terrain d'airsoft"/>
                                 </div>
 
                                 {/*--------   CABANE   -------*/}
@@ -173,8 +173,8 @@ const VerticalAccordeon = () => {
                                 </div>
 
                                 {/*--------   BACKGROUND   -------*/}
-                                <div className={clsx("parallax_bg",{"appariation_fade": extended && activeBlock === "block2"})} style={{position: "absolute", width: "100vw",top: "0", left: "-50px", zIndex: "1"}}>
-                                    <img src={cielarchery.src} style={{width: "105vw"}} className={parallaxSelector} data-speed={"2"} alt="terrain d'airsoft"/>
+                                <div className={clsx("parallax_bg",{"appariation_fade": extended && activeBlock === "block2"})} style={{position: "absolute", width: "110vw",top: "-50px", left: "-50px", zIndex: "1"}}>
+                                    <img src={cielarchery.src} style={{width: "105vw"}} className={parallaxSelector} data-speed={"3.5"} alt="terrain d'airsoft"/>
                                 </div>
                             </>
                         }
@@ -195,7 +195,7 @@ const VerticalAccordeon = () => {
                                 </div>
 
                                 <div className={"player_img"} style={{position: "absolute", bottom: "0",zIndex: "4"}}>
-                                    <img src={archeryPlayer.src} className={parallaxSelector} data-speed={"-1"} alt=""/>
+                                    <img src={archeryPlayer.src} alt=""/>
                                 </div>
 
                                 <div className={clsx("airsoft_column accordeon_btn_groups", {"visible": extended && activeBlock === "block2"})}>
@@ -222,7 +222,7 @@ const VerticalAccordeon = () => {
                             <>
                                 {/*--------   TONNEAUX   -------*/}
                                 <div className={clsx({"appariation_fade": extended && activeBlock === "block3"})} style={{position: "absolute", right: "-30px", bottom: "0", height: "150px", zIndex: "6"}}>
-                                    <img src={tonneau.src} className={parallaxSelector} data-speed={"2"} alt="terrain d'airsoft"/>
+                                    <img src={tonneau.src} className={parallaxSelector} data-speed={"1"} alt="terrain d'airsoft"/>
                                 </div>
 
                                 {/*--------   TERRAIN   -------*/}
@@ -236,8 +236,8 @@ const VerticalAccordeon = () => {
                                 </div>
 
                                 {/*--------   BACKGROUND   -------*/}
-                                <div className={clsx("parallax_bg",{"appariation_fade": extended && activeBlock === "block3"})} style={{position: "absolute", width: "100vw",top: "0", left: "-50px", zIndex: "1"}}>
-                                    <img src={paintballCiel.src} style={{width: "105vw"}} className={parallaxSelector} data-speed={"2"} alt="terrain d'airsoft"/>
+                                <div className={clsx("parallax_bg",{"appariation_fade": extended && activeBlock === "block3"})} style={{position: "absolute", width: "105%",top: "-50px", left: "-50px", zIndex: "1"}}>
+                                    <img src={paintballCiel.src} style={{width: "102%"}} className={parallaxSelector} data-speed={"3.5"} alt="terrain d'airsoft"/>
                                 </div>
                             </>
                         }
@@ -257,8 +257,8 @@ const VerticalAccordeon = () => {
                                     </div>
                                 </div>
 
-                                <div className={"player_img"} style={{position: "absolute", bottom: "0",zIndex: "4"}}>
-                                    <img src={paintballPlayer.src} className={parallaxSelector} data-speed={"-1"} alt=""/>
+                                <div className={"player_img"} style={{position: "absolute", bottom: "100px",zIndex: "4"}}>
+                                    <img src={paintballPlayer.src} alt=""/>
                                 </div>
 
                                 <div className={clsx("airsoft_column accordeon_btn_groups", {"visible": extended && activeBlock === "block3"})}>
@@ -285,7 +285,7 @@ const VerticalAccordeon = () => {
                             <>
                                 {/*--------   TONNEAUX   -------*/}
                                 <div className={clsx({"appariation_fade": extended && activeBlock === "block4"})} style={{position: "absolute", right: "-30px", bottom: "0", height: "150px", zIndex: "6"}}>
-                                    <img src={tonneau.src} className={parallaxSelector} data-speed={"2"} alt="terrain d'airsoft"/>
+                                    <img src={tonneau.src} className={parallaxSelector} data-speed={"1"} alt="terrain d'airsoft"/>
                                 </div>
 
                                 {/*--------   TERRAIN   -------*/}
@@ -294,13 +294,13 @@ const VerticalAccordeon = () => {
                                 </div>
 
                                 {/*--------   TOUR   -------*/}
-                                <div className={clsx("parallax_tour", {"appariation_fade": extended && activeBlock === "block4"})} style={{position: "absolute", right: "400px", bottom: "0", height: "100%", width: "200px", zIndex: "2"}}>
+                                <div className={clsx("parallax_tour", {"appariation_fade": extended && activeBlock === "block4"})} style={{position: "absolute", left: "40%", bottom: "0", height: "100%", width: "200px", zIndex: "2"}}>
                                     <img src={tour.src}  style={{width: "100%"}} className={parallaxSelector} data-speed={"0.5"} alt="terrain d'airsoft"/>
                                 </div>
 
                                 {/*--------   BACKGROUND   -------*/}
-                                <div className={clsx("parallax_bg",{"appariation_fade": extended && activeBlock === "block4"})} style={{position: "absolute", width: "100vw",top: "0", left: "-50px", zIndex: "1"}}>
-                                    <img src={laserSky.src} style={{width: "105vw"}} className={parallaxSelector} data-speed={"2"} alt="terrain d'airsoft"/>
+                                <div className={clsx("parallax_bg",{"appariation_fade": extended && activeBlock === "block4"})} style={{position: "absolute", width: "105%",top: "-50px", left: "-50px", zIndex: "1"}}>
+                                    <img src={laserSky.src} style={{width: "105vw"}} className={parallaxSelector} data-speed={"3.5"} alt="terrain d'airsoft"/>
                                 </div>
                             </>
                         }
@@ -321,7 +321,7 @@ const VerticalAccordeon = () => {
                                 </div>
 
                                 <div className={"player_img"} style={{position: "absolute", bottom: "0",zIndex: "4"}}>
-                                    <img src={lasergamePlayer.src} className={parallaxSelector} data-speed={"-1"} alt="image de joueur de lasergame"/>
+                                    <img src={lasergamePlayer.src} alt="image de joueur de lasergame"/>
                                 </div>
 
                                 <div className={clsx("airsoft_column accordeon_btn_groups", {"visible": extended && activeBlock === "block4"})}>
