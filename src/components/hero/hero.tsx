@@ -27,7 +27,7 @@ const Hero = () => {
                 <div className={`banner`} style={style}>
                     <div className="content">
                         <img src={aisoftLogo.src} alt="logo" className="movieTitle"/>
-                        <h2>Retrouvez les sensations de votre enfance grandeur nature dans une partie d’Airsoft</h2>
+                        <h2>Vivez des sensations grandeur nature sur un terrain de 4 hectares !</h2>
                         {/*
                             <h4>
                                 <span>2020</span>
@@ -37,7 +37,7 @@ const Hero = () => {
                             </h4>
                         */}
                         <p>
-                            Frissons et rires garantis en Wallonie avec l’Airsoft, jeu de plein air où l’on s’affronte avec des répliques et billes biodégradables.
+                        <strong>Entre amis</strong> ou <strong>en club</strong>, frissons et rires garantis en Wallonie avec l’Airsoft ! Plongez dans l'action avec ce jeu de plein air où l’on s’affronte avec des répliques et des billes biodégradables
                         </p>
                         {/*
                             <div className="buttons">
