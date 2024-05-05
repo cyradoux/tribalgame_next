@@ -437,12 +437,17 @@
 		top: 30px!important;
 	}
 	
-	.back .text .player_img{
-		bottom: 200px;
+	.block2 .back .text .player_img{
+		bottom: 200px!important;
 	}
 	
 	#image_accordeon .block .text .accordeon_logo_box {
 		max-width: 200px;
+	}
+	
+	#image_accordeon .block .block-w .text .accordeon_back {
+		top: 200px;
+		left: 40px;
 	}
 }
 @media screen and (max-width: 414px){
