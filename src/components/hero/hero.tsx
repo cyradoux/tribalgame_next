@@ -3,6 +3,8 @@ import airsoftHero from "../../assets/img/airsoft/player3.png";
 import logo from "../../assets/img/logo/logo.png";
 import arrow from "../../assets/img/icones/Arrow.webp";
 import aisoftLogo from "../../assets/img/logo/airsoftLogo.svg";
+import Image from "next/image";
+import Link from "next/link";
 
 export type HeroPropsType = {
   bgColor: string;
@@ -26,19 +28,18 @@ const Hero = () => {
       <div className={"hero"}>
         <div className={`banner`} style={style}>
           <div className="content">
-            <h1>Terrain airsoft</h1>
+            <h1>TERRAIN AIRSOFT</h1>
             <h2>
               Vivez des sensations grandeur nature sur un terrain de 4 hectares
               ! A Tournai (près de Lille)
             </h2>
-            {/*
-                            <h4>
-                                <span>2020</span>
-                                <span>12+</span>
-                                <span>1h 55min</span>
-                                <span>Action</span>
-                            </h4>
-                        */}
+            {
+              <h4>
+                <span>À partir de 35€</span>
+                <span>pour 2 H 00 min</span>
+                <span>Materiel Compris</span>
+              </h4>
+            }
             <p>
               <strong>Entre amis</strong> ou <strong>en club</strong>, frissons
               et rires garantis en Wallonie avec l’Airsoft ! Plongez dans
@@ -47,13 +48,13 @@ const Hero = () => {
             </p>
             {/*
                             <div className="buttons">
-                                <a href="#"><i className="fa fa-plus" aria-hidden="true"></i>Réserver</a>
+                                <Link href="#"><i className="fa fa-plus" aria-hidden="true"></i>Réserver</Link>
                             </div>
                         */}
           </div>
-          <a href="#contact" className="play">
-            Réserver <img src={arrow.src} alt="" />
-          </a>
+          <Link href="#contact" className="play">
+            Réserver <Image height={25} width={25} src={arrow.src} alt="" />
+          </Link>
         </div>
       </div>
     </>

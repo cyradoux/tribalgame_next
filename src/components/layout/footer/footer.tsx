@@ -2,6 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import logo from "../../../assets/img/logo/logo.png";
 import bg from "../../../assets/img/layout/bg.png";
+import Image from 'next/image';
 const Footer = () => {
     return (
         <>
@@ -38,12 +39,12 @@ const Footer = () => {
                             </div>
 
                             <div className={`col-lg-4 col-md-6 footer_logo`}>
-                                <img src={logo.src} alt=""/>
+                                <Image height={54} width={160} src={logo.src} alt=""/>
                             </div>
 
                             <div className="col-12" style={{textAlign: "center"}}>
                                 <div className={ "footer_contact_p" }>
-                                    &copy; Copyright <strong><span>tribal</span></strong>. Tous droits réservés. Crée par <a href="https://www.0001.fr/">0001 Communication</a>
+                                    &copy; Copyright <strong><span>tribal</span></strong>. Tous droits réservés. Crée par <a href="https://0001-communication.fr/">0001 Communication</a>
                                 </div>
                             </div>
                         </div>

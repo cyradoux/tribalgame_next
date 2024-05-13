@@ -23,7 +23,7 @@
 	{
 		position: relative;
 		z-index: 1;
-		max-width: 550px;
+		max-width: 600px;
 		
 		.movieTitle
 		{
@@ -85,6 +85,7 @@
 	}
 	.banner .content .buttons
 	{
+		display: inline-block;
 		position: relative;
 	}
 	.banner .content .buttons a

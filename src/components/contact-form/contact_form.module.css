@@ -202,4 +202,9 @@
 .consent_box {
     font-style: oblique;
     font-size: 12px;
+    margin-left: 15px;
+}
+.form-check-input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px !important;
 }

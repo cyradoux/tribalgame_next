@@ -1,5 +1,6 @@
 import React from "react";
 import chevron from "../../assets/img/layout/chevron.png";
+import Image from "next/image";
 
 export type FaqPropsType = {
   faqItems: FaqItem[];
@@ -27,7 +28,7 @@ const Faq = ({ faqItems }: FaqPropsType) => {
                       data-bs-target={`#faq-content-${i}`}
                     >
                       <span className={"num"}>
-                        <img src={chevron.src} alt="" />
+                        <Image src={chevron.src} alt="" />
                       </span>
                       {item.question}
                     </button>

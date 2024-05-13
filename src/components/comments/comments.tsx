@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,92 +8,68 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+
+import arrow from "../../assets/img/comment/fivestars.svg";
+import Image from "next/image";
 
 export type CommentsPropsType = {
-  CommentsItems: CommentsItem[];
+  reviews?: CommentsItem[]; // Mettre le tableau comme optionnel avec ?
 };
 
 export type CommentsItem = {
-  question: string;
-  response: string;
+  auteur: string;
+  date: string;
+  commentaire: string;
 };
-/*
-const [comments, setComments] = useState([]);
-
-useEffect(() => {
-  // Fonction asynchrone pour récupérer les avis de l'API
-  const fetchData = async () => {
-    try {
-      const accountId = "yourAccountId";
-      const locationId = "yourLocationId";
-      const data = await fetchReviews(accountId, locationId);
-      setComments(data); // Met à jour l'état avec les données récupérées
-    } catch (error) {
-      console.error("Error fetching reviews:", error);
-    }
-  };
-
-  fetchData(); // Appel de la fonction pour récupérer les données
-}, []);
-
-*/
-const Comments = () => {
-
- /* const faqItems = CommentsItems.map((item, i) => (
-    <SwiperSlide>
-      <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+const Comments = ({ reviews = [] }: CommentsPropsType) => {
+  const reviewsItems = reviews.map((item, i) => (
+    <SwiperSlide key={i}>
+      <div key={i} className="comments-item">
+        {/* Étoiles */}
+        {/* Contenu du commentaire */}
+        <div className="comment-content">
+          <h3 className="author-name">{item.auteur}</h3>
+          <div className="rating-stars">
+            {/* Insérez ici votre composant ou code pour afficher les étoiles */}
+            <Image width={0} height={0}  style={{ width: '100%', height: 'auto' }} src={arrow.src} alt="etoiles" />
+          </div>
+          <p className="comment-date">{item.date}</p>
+          <p className="comment-text">{item.commentaire}</p>
+        </div>
+      </div>
     </SwiperSlide>
-  )); */
+  ));
 
   return (
     <>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 20,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-       <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-      </Swiper>
+      <section id="comment" className="comment">
+        <div className="row content gy-4">
+          <h3>4,8 sur 51 avis Google</h3>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 20,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            autoplay={{
+              delay: 1500,
+            }}
+            pagination={true}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
+            className="mySwiper"
+          >
+            {reviewsItems}
+          </Swiper>
+        </div>
+      </section>
     </>
   );
 };
-
 export default Comments;

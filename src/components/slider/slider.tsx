@@ -8,8 +8,8 @@ export type SliderPropsType = {
 
 export type Slide = {
     img: string,
-    title: string,
-    text: string
+    title?: string,
+    text?: string
 }
 
 const Slider = ({sliderItems}: SliderPropsType) => {
