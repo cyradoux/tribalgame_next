@@ -1,0 +1,334 @@
+{
+  /*-----------  Utilitaires  -------------*/
+}
+
+import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import Layout from "@/components/layout/layout";
+import SectionTitle from "@/components/UI/section-title/section-title";
+import bg from "@/assets/img/layout/layout_assault.png";
+import AnimatedBorder from "@/components/UI/animated-border/animated-border";
+import airsoft from "../assets/img/logo/airsoftLogo.svg";
+import Dateslider from "@/components/dateslider/dateslider";
+import Input from "@/components/UI/input/input";
+import useInput from "@/hooks/useInput";
+import { verifyLength } from "@/utils/verify";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+import { useToggle } from "@/hooks/useToogle";
+
+{
+  /*-----------  composants  -------------*/
+}
+
+export const metadataLaser = {
+  title: "Tribal | LaserTag en extérieur",
+  description:
+    "Découvrez une expérience unique de Laser Tag en extérieur près de Tournai, à seulement 15 minutes de Lille. Tribal Games propose des parties endiablées de laser game avec des lasers ultramodernes dans un cadre naturel",
+};
+
+const style = {
+  //backgroundImage: `linear-gradient(to top, rgba(33, 34, 38, 0.01) 0%, rgba(33, 34, 38, 1) 80%), url("${bg.src}")`,
+  backgroundColor: "#fff",
+  backgroundRepeat: "no-repeat, no-repeat",
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed",
+  padding: 0,
+  minHeight: "100vh",
+};
+
+const sectionTitle = {
+  titleBorderColor: "linear-gradient(to bottom, #FF00F5 0%, #7000FF 100%)",
+  titleBgColor: "rgba(0,0,0,0)",
+};
+
+const reservation = () => {
+  const {
+    value: enteredLastName,
+    isValid: lastNameIsValid,
+    hasError: hasLastNameError,
+    handleInputChange: handleLastNameChange,
+    handleInputBlur: handleLastNameBlur,
+    reset: lastNameReset,
+  } = useInput("", (enteredMessage) => verifyLength(enteredMessage, 5, 300));
+
+  const [scheduleDate, setScheduleDate] = useState(
+    new Date("2023-06-14T05:00:00.000+00:00")
+  );
+  const [showDatePicker, setShowDatePicker] = useState(false);
+
+  const [selectedDay, setSelectedDay] = useState<null | string>(null);
+  const [nBselectedPlayer = 1, setNBselectedPlayer] = useState<number>(1);
+
+  const handleDateClick = (selectedDay: string) => {
+    setSelectedDay(selectedDay);
+    console.log(selectedDay);
+  };
+
+  const handleClickaddPlayer = () => {
+    setNBselectedPlayer(nBselectedPlayer + 1);
+  };
+
+  const handleClickremovePlayer = () => {
+    if (nBselectedPlayer > 1) {
+      setNBselectedPlayer(nBselectedPlayer - 1);
+    }
+  };
+  const [makeReservation, setmakeReservation] = useToggle(false);
+
+  const handleClickMakeReservation = () => {
+    setmakeReservation();
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const datas = Object.fromEntries(formData.entries());
+  };
+
+  return (
+    <>
+      <Layout metadata={metadataLaser}>
+        <section
+          id={"equipment"}
+          className={"container-fluid lasergame"}
+          style={style}
+        >
+          <div className={"container-fluid"}>
+            <div className="row">
+              <SectionTitle
+                title={"Reservation Airsoft"}
+                borderColor={sectionTitle.titleBorderColor}
+                borderPosition={"align_left"}
+                background={"transparent"}
+              ></SectionTitle>
+              <div className={"col-md-12 equipment_content"}>
+                <AnimatedBorder>
+                  <div className="animated_border_container reservation_box">
+                    <div
+                      className={`make-reservation ${
+                        makeReservation ? "active" : ""
+                      }`}
+                    >
+                      <button onClick={handleClickMakeReservation}>
+                        make reseservation
+                      </button>
+                    </div>
+                    <div className="col-xl-4 col-lg-5 col-12">
+                      <Image
+                        width={355}
+                        height={355}
+                        alt="image airsoft"
+                        src={airsoft.src}
+                      />
+                    </div>
+                    <div className="col-xl-8 col-lg-7 col-12 p-4">
+                      <form onSubmit={handleSubmit} role="form">
+                        <div className="nb-player">
+                          nombre de joueur :
+                          <input
+                          name="nBselectedPlayer"
+                            readOnly
+                            type="number"
+                            value={nBselectedPlayer}
+                          />
+                          <button onClick={handleClickremovePlayer}>
+                            - Retirer un joueur
+                          </button>
+                          <button onClick={handleClickaddPlayer}>
+                            + Ajouter un joueur
+                          </button>
+                        </div>
+                        <div>
+                          <div>
+                            <h2>Reservation partie</h2>
+                            <DatePicker
+                              onchange={handleDateClick}
+                              selected={selectedDay}
+                              showDatePicker={showDatePicker}
+                              withPortal
+                            />
+                          </div>
+                        </div>
+
+                        <Dateslider onDateClick={handleDateClick} />
+
+                        <hr />
+                      </form>
+                    </div>
+                  </div>
+                </AnimatedBorder>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Layout>
+    </>
+  );
+};
+
+export default reservation;
+
+
+
+import React, { FormEvent, useState } from "react";
+import Layout from "@/components/layout/layout";
+import SectionTitle from "@/components/UI/section-title/section-title";
+import AnimatedBorder from "@/components/UI/animated-border/animated-border";
+import airsoft from "../assets/img/logo/airsoftLogo.svg";
+import "react-datepicker/dist/react-datepicker.css";
+import { useToggle } from "@/hooks/useToogle";
+import TogglePanel from "@/components/reservation/toggle-panel";
+import StepTwoForm from "@/components/reservation/StepTwoForm";
+import StepOneForm from "@/components/reservation/StepOneForm";
+import {
+  validateDay,
+  validateHour,
+  validateNbrPlayer,
+} from "@/utils/validation";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+export const metadataLaser = {
+  title: "Tribal | LaserTag en extérieur",
+  description:
+    "Découvrez une expérience unique de Laser Tag en extérieur près de Tournai, à seulement 15 minutes de Lille. Tribal Games propose des parties endiablées de laser game avec des lasers ultramodernes dans un cadre naturel",
+};
+
+const style = {
+  backgroundColor: "#fff",
+  backgroundRepeat: "no-repeat, no-repeat",
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed",
+  padding: 0,
+  minHeight: "100vh",
+};
+
+const sectionTitle = {
+  titleBorderColor: "linear-gradient(to bottom, #FF00F5 0%, #7000FF 100%)",
+  titleBgColor: "rgba(0,0,0,0)",
+};
+
+const Reservation = () => {
+  const [makeReservation, setMakeReservation] = useToggle(false);
+  const [active, setActive] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
+
+  const [nextStep, setNextStep] = useState<boolean>(false);
+  const [nbrPlayer, setNbrPlayer] = useState<number>(1);
+  const [day, setDay] = useState<Date | null>(null);
+  const [hour, setHour] = useState<string>("");
+
+  const handleClickToggleStep = () => {
+    if (!validateDay(day)) {
+      toast.error("Veuillez sélectionner une date valide.");
+    } else if (!validateHour(hour)) {
+      toast.error("Veuillez sélectionner une heure valide.");
+    } else {
+      setActive(!active);
+    }
+  };
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsLoading(true);
+    setError(null);
+    setSuccess(null);
+
+    try {
+      const formData = new FormData(event.currentTarget);
+      const datas = Object.fromEntries(formData.entries());
+      console.log(datas, "datas");
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("La soumission a échoué");
+      }
+
+      const data = await response.json();
+      setSuccess("Formulaire soumis avec succès");
+      // Traite les données de la réponse si nécessaire
+    } catch (error) {
+      setError((error as Error).message);
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  const handleDateClick = (selectedDay: Date | null) => {
+    setDay(selectedDay);
+  };
+
+  return (
+    <>
+      <Layout metadata={metadataLaser}>
+        <section
+          id={"equipment"}
+          className={"container-fluid lasergame"}
+          style={style}
+        >
+          <div className={"container-fluid"}>
+            <div className="row">
+              <SectionTitle
+                title={"Reservation Airsoft"}
+                borderColor={sectionTitle.titleBorderColor}
+                borderPosition={"align_left"}
+                background={"transparent"}
+              />
+              <div className={"col-md-12 equipment_content"}>
+                <AnimatedBorder>
+                  <div
+                    className={`animated_border_container reservation_box ${
+                      active ? "active" : ""
+                    }`}
+                  >
+                    <div className="toggle-container">
+                      <div className="toggle">
+                        <TogglePanel
+                          image={airsoft}
+                          text={"Etape 1 sur 2"}
+                          className={"one"}
+                          isButtonVisible={true}
+                          buttonText={"Suivant"}
+                          handleClickClassActive={handleClickToggleStep}
+                        />
+                        <TogglePanel
+                          image={airsoft}
+                          text={"Etape 2 sur 2"}
+                          className={"two"}
+                          isButtonVisible={true}
+                          buttonText={"Précédent"}
+                          handleClickClassActive={handleClickToggleStep}
+                        />
+                      </div>
+                    </div>
+                    <div className="reservation_form">
+                      <form onSubmit={onSubmit} role="form">
+                        <StepOneForm
+                          onReservationDateChange={setDay}
+                          onReservationHourChange={setHour}
+                          onReservationNbrPlayerChange={setNbrPlayer}
+                        />
+                        <StepTwoForm />
+                      </form>
+                    </div>
+                  </div>
+                </AnimatedBorder>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Layout>
+      <ToastContainer />
+    </>
+  );
+};
+
+export default Reservation;

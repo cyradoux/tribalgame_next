@@ -10,19 +10,19 @@ import Image from "next/image";
   /*-----------  composants  -------------*/
 }
 
-import GenericHero from "@/components/hero/generic-hero";
-import ContactForm from "@/components/contact-form/contact-form";
 import Layout from "@/components/layout/layout";
 import Comments from "@/components/comments/comments";
 import SectionTitle from "@/components/UI/section-title/section-title";
 import GenericDoubleImages from "@/components/double_img/generic-double-images";
 import ImageStack from "@/components/image-stack/image-stack";
 import { unblockScroll } from "@/utils/scrollBlocker";
-import { fetchReviews } from "@/services/googleBusinessService";
+import { fetchReviews } from "@/store/data/google/googleBusinessService";
 
 {
   /*-----------  Images  -------------*/
 }
+
+import archeryLogo from "@/assets/img/logo/airsoftLogo.svg";
 
 import Slider from "@/components/slider/slider";
 import slide1 from "../assets/img/archerytag/slides/slide1.png";
@@ -34,7 +34,6 @@ import slide6 from "../assets/img/archerytag/slides/slide6.png";
 
 import rayure from "@/assets/img/layout/RAYURE.svg";
 import player2 from "@/assets/img/airsoft/mask_bg.png";
-import AnimatedBorder from "@/components/UI/animated-border/animated-border";
 import archeryTagBg from "../assets/img/archerytag/archery_tag_bg.webp";
 import bg from "@/assets/img/layout/bg.png";
 import arrows from "../assets/img/archerytag/arrow_archery_tag.webp";
@@ -42,6 +41,7 @@ import archeryTag1 from "@/assets/img/archerytag/archeryTag1.webp";
 import archeryTag2 from "@/assets/img/archerytag/archeryTag2.webp";
 import PriceSlider from "@/components/priceBox/PriceSlider";
 import arrow from "@/assets/img/icones/Arrow.webp";
+import ReservationBox from "@/components/ReservationBox/reservation";
 
 {
   /*-----------  Données  -------------*/
@@ -319,8 +319,8 @@ const Archerytag = () => {
               <div className="row">
                 <div className={"col-md-6 description_box"}>
                   <p>
-                    Profitez d’un terrain de 40 000 mètres carrés adapté pour
-                    exercer vos talents d’archer ! En équipe ou en solitaire,
+                    Profitez d’un terrain de 40 000 mètres carrés adapté pour
+                    exercer vos talents d’archer ! En équipe ou en solitaire,
                     partez affronter en équipe vos adversaires avec
                     détermination et courage.
                   </p>
@@ -470,7 +470,7 @@ const Archerytag = () => {
           </div>
         </section>
 
-        {/*-----------  Equipment  -------------*/}
+        {/*-----------  Contact Form  -------------*/}
 
         <section
           id={"equipment"}
@@ -480,54 +480,21 @@ const Archerytag = () => {
           <div className={"container-fluid"}>
             <div className="row">
               <SectionTitle
-                title={"Conditions et équipement"}
+                title={"Réservez votre partie d'Archery Tag"}
                 borderColor={sectionTitle.titleBorderColor}
                 borderPosition={"align_left"}
                 background={"transparent"}
               ></SectionTitle>
               <div className={"col-md-12 equipment_content"}>
-                <AnimatedBorder>
-                  <p>
-                    Pour nous rejoindre, rien de plus simple il vous suffit
-                    d&apos;avoir entre 8 ans pour le laser et 16ans pour le
-                    l&apos;airsoft.
-                  </p>
-                  <p>
-                    Au niveau de l&apos;équipement vous pouvez apporter votre
-                    équipement ou en louer sur place.
-                  </p>
-                </AnimatedBorder>
+                <ReservationBox
+                  image={archeryLogo}
+                  colorCode={sectionTitle.titleBorderColor}
+                />
               </div>
             </div>
           </div>
         </section>
 
-        {/*-----------  Gallery  -------------*/}
-        {/*
-        <section id={"gallery"} className={"container-fluid"} style={style}>
-          <SectionTitle
-            title={"Galerie Photos"}
-            borderColor={sectionTitle.titleBorderColor}
-            borderPosition={"align_right"}
-            background={"transparent"}
-          ></SectionTitle>
-          <Slider sliderItems={slidesData} />
-        </section>
-/*}
-        {/*-----------  Contact Form  -------------*/}
-        <div
-          id="contact"
-          className={"container-fluid contact_form_box"}
-          style={style}
-        >
-          <SectionTitle
-            title={"Contactez-nous"}
-            borderColor={sectionTitle.titleBorderColor}
-            borderPosition={"align_left"}
-            background={"transparent"}
-          ></SectionTitle>
-          <ContactForm />
-        </div>
         {/*--------------    Comments    ----------------*/}
 
         <section id={"comments"} className={"container-fluid"} style={style}>

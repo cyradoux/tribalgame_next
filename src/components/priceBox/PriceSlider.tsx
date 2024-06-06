@@ -44,8 +44,8 @@ const PriceSlider: React.FC<PriceSliderProps> = ({
     duplicatedPrices = [...prices, ...prices];
   }
   const reviewsItems = duplicatedPrices.map((price, i) => (
-    <SwiperSlide key={i}>
-      <div className="price-slider">
+    <SwiperSlide className="price-slide" key={i}>
+      <div >
         <div className="price-slider-content">
           <div className="price-slider-name">
             <h4>{price.name}</h4>
@@ -88,11 +88,11 @@ const PriceSlider: React.FC<PriceSliderProps> = ({
             slidesPerView={"auto"}
             pagination={true}
             autoplay={{
-              delay: 3500,
+              delay: 300500,
             }}
             loop={true}
             modules={[Autoplay, Navigation, Pagination, EffectCarousel]}
-            className="mySwiper"
+            className="price-slider"
           >
             {reviewsItems}
           </Swiper>

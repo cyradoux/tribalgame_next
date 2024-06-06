@@ -91,6 +91,7 @@ const ContactForm = () => {
     handleInputBlur: handleMessagetBlur,
     reset: messageReset,
   } = useInput("", (enteredMessage) => verifyLength(enteredMessage, 5, 300));
+
   const {
     isChecked: isConsentChecked,
     toggle: consentToggle,
@@ -98,46 +99,24 @@ const ContactForm = () => {
   } = useCheckbox(false);
 
   const { isLoading, error, isSuccess, sendRequest } = useFetch();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    console.log("submit");
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
     const datas = Object.fromEntries(formData.entries());
 
-    // @ts-ignore
-    window.grecaptcha.ready(async () => {
-      // @ts-ignore
-      const token = await window.grecaptcha.execute("<clé recaptcha>", {
-        action: "submit",
-      });
-
-      sendRequest({
-        url: "/api/contact",
-        method: RequestMethods.POST,
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: { ...datas, "g-recaptcha-response": token },
-      });
-
-      if (isSuccess) {
-        lastNameReset();
-        nameReset();
-        emailReset();
-        telReset();
-        subjectReset();
-        messageReset();
-        consentReset();
-      }
-    });
+    console.log(datas, "icilesdatasarecuperer");
   };
 
   return (
     <>
       <section className={classes.contact}>
-        <div className="container">
-          <div className="row gx-lg-0 gy-4">
+        <div className="container text-center">
+          <h2>Par téléphone au 06 07 24 46 35 de 9h à 18h 7/7.</h2>
+          {/* <div className="row gx-lg-0 gy-4">
             <div className="col-lg-12">
-              <form
+            <form
                 onSubmit={handleSubmit}
                 role="form"
                 className={classes.email_form}
@@ -155,8 +134,8 @@ const ContactForm = () => {
                       onChange={handleLastNameChange}
                       onBlur={handleLastNameBlur}
                       value={enteredLastName}
-                      minlength="2"
-                      maxlength="40"
+                      minLength="2"
+                      maxLength="40"
                     />
                     {hasLastNameError ? (
                       <p className={classes.input_error_message}>
@@ -179,8 +158,8 @@ const ContactForm = () => {
                       onChange={handleFirstNameChange}
                       onBlur={handleFirstNameBlur}
                       value={enteredFirstName}
-                      minlength="2"
-                      maxlength="40"
+                      minLength="2"
+                      maxLength="40"
                     />
                     {hasFirstNameError ? (
                       <p className={classes.input_error_message}>
@@ -251,8 +230,8 @@ const ContactForm = () => {
                     onChange={handleSubjectChange}
                     onBlur={handleSubjectBlur}
                     value={enteredSubject}
-                    minlength="4"
-                    maxlength="50"
+                    minLength="4"
+                    maxLength="50"
                   />
                   {hasSubjectError ? (
                     <p className={classes.input_error_message}>
@@ -326,8 +305,8 @@ const ContactForm = () => {
                     onBlur={handleMessagetBlur}
                     value={enteredMessage}
                     rows={7}
-                    minlength="4"
-                    maxlength="50"
+                    minLength="4"
+                    maxLength="50"
                   ></Textarea>
                   {hasMessageError ? (
                     <p className={classes.input_error_message}>
@@ -343,7 +322,6 @@ const ContactForm = () => {
                     id={"consentement"}
                     type={"checkbox"}
                     name={"consent"}
-                    required={true}
                     label={
                       "Les données à caractères personnels recueillis par le présent formulaire sont destinées\n" +
                       "à être utilisé pour vous recontacter"
@@ -373,7 +351,7 @@ const ContactForm = () => {
                 </div>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

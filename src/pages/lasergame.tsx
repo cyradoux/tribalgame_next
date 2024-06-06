@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Slider from "@/components/slider/slider";
 import SectionTitle from "@/components/UI/section-title/section-title";
-import player2 from "../assets/img/airsoft/mask_bg.png";
 import bg from "../assets/img/layout/bg.png";
-import AnimatedBorder from "@/components/UI/animated-border/animated-border";
 import ImageStack from "@/components/image-stack/image-stack";
 import rayure from "../assets/img/layout/RAYURE_laser.svg";
 import lasergame1 from "../assets/img/lasergame/lasergame1.webp";
 import lasergame2 from "../assets/img/lasergame/lasergame2.webp";
-import ContactForm from "@/components/contact-form/contact-form";
+
+import lasergameLogo from "@/assets/img/logo/lasergameLogo.svg";
 
 import slide1 from "../assets/img/airsoft/slides/slide1.png";
 import slide2 from "../assets/img/airsoft/slides/slide2.png";
@@ -18,17 +16,17 @@ import slide3 from "../assets/img/airsoft/slides/slide3.png";
 import slide4 from "../assets/img/airsoft/slides/slide4.png";
 import slide5 from "../assets/img/airsoft/slides/slide5.png";
 import slide6 from "../assets/img/airsoft/slides/slide6.png";
-import GenericHero from "@/components/hero/generic-hero";
+
 import lasergameBg from "@/assets/img/lasergame/lasergame_bg_hero.webp";
-import lasergameLogo from "@/assets/img/logo/lasergameLogo.svg";
 import lasertagWeapons from "@/assets/img/lasergame/lasertag_weapon.webp";
 import { unblockScroll } from "@/utils/scrollBlocker";
 import Layout from "@/components/layout/layout";
 import Comments from "@/components/comments/comments";
-import { fetchReviews } from "@/services/googleBusinessService";
+import { fetchReviews } from "@/store/data/google/googleBusinessService";
 import PriceSlider from "@/components/priceBox/PriceSlider";
 import DoubleImg from "@/components/double_img/generic-double-images";
 import arrow from "../assets/img/icones/Arrow.webp";
+import ReservationBox from "@/components/ReservationBox/reservation";
 const slidesData = [
   {
     img: slide1.src,
@@ -79,15 +77,9 @@ const Lasergame = () => {
   const style = {
     backgroundImage: `radial-gradient(circle, rgba(112,0,255,0.2) 0%, rgba(33, 34, 38, 1) 50%), url("${bg.src}")`,
     backgroundRepeat: "no-repeat, no-repeat",
-    backgroundSize: "cover", // Ajustez selon le besoin
-    backgroundAttachment: "fixed",
-    height: "100%",
-  };
-
-  const style2 = {
-    background: `linear-gradient(to bottom, rgba(112,0,255,0.2) 0%, rgba(33, 34, 38, 0.5) 100%), url("${player2.src}")`,
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
+    height: "100%",
   };
 
   const heroStyle = {
@@ -116,7 +108,7 @@ const Lasergame = () => {
       description: [
         "Briefing",
         "Accès au terrain",
-        "Arme principale + Arme secondaire",
+        "Blaster principale + Blaster secondaire",
         "Bandeau tête + Bracelet Tazer",
       ],
       price: {
@@ -133,7 +125,7 @@ const Lasergame = () => {
       description: [
         "Briefing",
         "Accès au terrain",
-        "Arme principale + Arme secondaire",
+        "Blaster principale + Blaster secondaire",
         "Bandeau tête + Bracelet Tazer",
       ],
       price: {
@@ -404,7 +396,7 @@ const Lasergame = () => {
                     tarifsName={"TARIFS EVENEMENT"}
                     prices={priceLaserEvent}
                   ></PriceSlider>
-                  </div>
+                </div>
               </div>
 
               <ImageStack
@@ -444,63 +436,31 @@ const Lasergame = () => {
             </section>
             */}
 
-        {/*-----------  Equipment  -------------*/}
+        {/*-----------  Contact Form  -------------*/}
+
         <section
           id={"equipment"}
-          className={"container-fluid lasergame"}
+          className={"container-fluid archerytag"}
           style={style}
         >
           <div className={"container-fluid"}>
             <div className="row">
               <SectionTitle
-                title={"Conditions et équipement"}
+                title={"Contactez-nous"}
                 borderColor={sectionTitle.titleBorderColor}
                 borderPosition={"align_left"}
                 background={"transparent"}
               ></SectionTitle>
               <div className={"col-md-12 equipment_content"}>
-                <AnimatedBorder>
-                  <p>
-                    Pour nous rejoindre, rien de plus simple il vous suffit
-                    d&apos;avoir entre 8 ans pour le laser et 16ans pour le
-                    l&apos;airsoft.
-                  </p>
-                  <p>
-                    Au niveau de l&apos;équipement vous pouvez apporter votre
-                    équipement ou en louer sur place.
-                  </p>
-                </AnimatedBorder>
+                <ReservationBox
+                  image={lasergameLogo}
+                  colorCode={sectionTitle.titleBorderColor}
+                />
               </div>
             </div>
           </div>
         </section>
 
-        {/*-----------  Gallery  -------------*/}
-        {/*
-        <section id={"gallery"} className={"container-fluid"} style={style}>
-          <SectionTitle
-            title={"Galerie Photos"}
-            borderColor={sectionTitle.titleBorderColor}
-            borderPosition={"align_right"}
-            background={"transparent"}
-          ></SectionTitle>
-          <Slider sliderItems={slidesData} />
-        </section>
-         //*/}
-        {/*-----------  Contact Form  -------------*/}
-        <div
-          id="contact"
-          className={"container-fluid contact_form_box"}
-          style={style}
-        >
-          <SectionTitle
-            title={"Contactez-nous"}
-            borderColor={sectionTitle.titleBorderColor}
-            borderPosition={"align_left"}
-            background={"transparent"}
-          ></SectionTitle>
-          <ContactForm />
-        </div>
         {/*--------------    Comments    ----------------*/}
 
         <section id={"comments"} className={"container-fluid"} style={style}>

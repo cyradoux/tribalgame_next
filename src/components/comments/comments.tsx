@@ -24,15 +24,21 @@ export type CommentsItem = {
 };
 const Comments = ({ reviews = [] }: CommentsPropsType) => {
   const reviewsItems = reviews.map((item, i) => (
-    <SwiperSlide key={i}>
-      <div key={i} className="comments-item">
+    <SwiperSlide className="comments-item" key={i}>
+      <div key={i}>
         {/* Étoiles */}
         {/* Contenu du commentaire */}
         <div className="comment-content">
           <h3 className="author-name">{item.auteur}</h3>
           <div className="rating-stars">
             {/* Insérez ici votre composant ou code pour afficher les étoiles */}
-            <Image width={0} height={0}  style={{ width: '100%', height: 'auto' }} src={arrow.src} alt="etoiles" />
+            <Image
+              width={0}
+              height={0}
+              style={{ width: "100%", height: "auto" }}
+              src={arrow.src}
+              alt="etoiles"
+            />
           </div>
           <p className="comment-date">{item.date}</p>
           <p className="comment-text">{item.commentaire}</p>
@@ -59,11 +65,11 @@ const Comments = ({ reviews = [] }: CommentsPropsType) => {
               slideShadows: true,
             }}
             autoplay={{
-              delay: 1500,
+              delay: 150000,
             }}
             pagination={true}
             modules={[EffectCoverflow, Pagination, Autoplay]}
-            className="mySwiper"
+            className="comments-slider swiper-container"
           >
             {reviewsItems}
           </Swiper>

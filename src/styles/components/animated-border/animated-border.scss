@@ -1,106 +1,145 @@
-.animated_border_box
-{
-	position: relative;
-	width: 80%;
-	height: 500px;
-	background: rgba(33, 34, 38, 0.7);
-	border-radius: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	margin-top: 100px;
-}
-.animated_border_box::after
-{
-	content: '';
-	position: absolute;
-	width: 200vw;
-	height: 200vh;
+.animated_border_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.animated_border_box::before
-{
-	content: '';
-	position: absolute;
-	width: 200vw;
-	height: 200vh;
+.animated_border_box {
+  position: relative;
+  width: 80%;
+  padding: 10px;
+  background: rgba(33, 34, 38, 0.7);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 100px;
+  min-height: 480px;
+}
+.animated_border_box::after {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
 }
 
-.paintball .animated_border_box::after{
-	background-image: conic-gradient(rgba(33, 34, 38, 0.8),rgba(255,0,0,0.3), rgba(33, 34, 38, 0.8), rgba(51,0,255, 0.3));
-	animation: animate 4s linear infinite;
+.animated_border_box::before {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
 }
 
-.paintball .animated_border_box::before{
-	background-image:  conic-gradient(rgba(33, 34, 38, 0.8),rgba(255,0,0,0.3), rgba(33, 34, 38, 0.8), rgba(51,0,255, 0.3));
-	animation: animate 4s linear infinite;
-	animation-delay: -2s;
+.paintball .animated_border_box::after {
+  background-image: conic-gradient(
+    rgba(33, 34, 38, 0.8),
+    rgba(255, 0, 0, 0.3),
+    rgba(33, 34, 38, 0.8),
+    rgba(51, 0, 255, 0.3)
+  );
+  animation: animate 4s linear infinite;
 }
 
-.lasergame .animated_border_box::after{
-	background-image: conic-gradient(rgba(33, 34, 38, 0.8),rgba(255,0,0,0.3), rgba(33, 34, 38, 0.8), rgba(51,0,255, 0.3));
-	animation: animate 4s linear infinite;
+.paintball .animated_border_box::before {
+  background-image: conic-gradient(
+    rgba(33, 34, 38, 0.8),
+    rgba(255, 0, 0, 0.3),
+    rgba(33, 34, 38, 0.8),
+    rgba(51, 0, 255, 0.3)
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
 }
 
-.lasergame .animated_border_box::before{
-	background-image: conic-gradient(rgba(33, 34, 38, 0.8),rgba(255,0,0,0.3), rgba(33, 34, 38, 0.8), rgba(51,0,255, 0.3));
-	animation: animate 4s linear infinite;
-	animation-delay: -2s;
+.lasergame .animated_border_box::after {
+  background-image: conic-gradient(
+    rgba(33, 34, 38, 0.8),
+    rgba(255, 0, 0, 0.3),
+    rgba(33, 34, 38, 0.8),
+    rgba(51, 0, 255, 0.3)
+  );
+  animation: animate 4s linear infinite;
 }
 
-.archerytag .animated_border_box::after{
-	background-image: conic-gradient(rgba(33, 34, 38, 0.8),rgba(191,69,1,0.3), rgba(33, 34, 38, 0.8), rgba(255,0,0, 0.3));
-	animation: animate 4s linear infinite;
+.lasergame .animated_border_box::before {
+  background-image: conic-gradient(
+    rgba(33, 34, 38, 0.8),
+    rgba(255, 0, 0, 0.3),
+    rgba(33, 34, 38, 0.8),
+    rgba(51, 0, 255, 0.3)
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
 }
 
-.archerytag .animated_border_box::before{
-	background-image: conic-gradient(rgba(33, 34, 38, 0.8),rgba(191,69,1,0.3), rgba(33, 34, 38, 0.8), rgba(255,0,0, 0.3));
-	animation: animate 4s linear infinite;
-	animation-delay: -2s;
+.archerytag .animated_border_box::after {
+	background-image: conic-gradient(
+		rgba(33, 34, 38, 0.8),
+		rgba(255, 255, 0, 0.8), /* Jaune vif pour l'effet plasma */
+		rgba(33, 34, 38, 0.8),
+		rgba(255, 255, 255, 0.8) /* Blanc vif pour l'effet de lumière */
+	  );
+  animation: animate 4s linear infinite;
 }
 
-.airsoft .animated_border_box::after{
-	background-image: conic-gradient(rgba(33, 34, 38, 0.8),rgba(51,62,37,0.3), rgba(33, 34, 38, 0.8), rgba(114,68,58, 0.3));
-	animation: animate 4s linear infinite;
+.archerytag .animated_border_box::before {
+  background-image: conic-gradient(
+    rgba(33, 34, 38, 0.8),
+    rgba(191, 69, 1, 0.3),
+    rgba(33, 34, 38, 0.8),
+    rgba(255, 0, 0, 0.3)
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
 }
 
-.airsoft .animated_border_box::before{
-	background-image: conic-gradient(rgba(33, 34, 38, 0.8),rgba(51,62,37,0.3), rgba(33, 34, 38, 0.8), rgba(114,68,58, 0.3));
-	animation: animate 4s linear infinite;
-	animation-delay: -2s;
+.airsoft .animated_border_box::after {
+  background-image: conic-gradient(
+    rgba(33, 34, 38, 0.8),
+    rgba(51, 62, 37, 0.3),
+    rgba(33, 34, 38, 0.8),
+    rgba(114, 68, 58, 0.3)
+  );
+  animation: animate 4s linear infinite;
+}
+
+.airsoft .animated_border_box::before {
+  background-image: conic-gradient(
+    rgba(33, 34, 38, 0.8),
+    rgba(51, 62, 37, 0.3),
+    rgba(33, 34, 38, 0.8),
+    rgba(114, 68, 58, 0.3)
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
 }
 
 @keyframes animate {
-	0%
-	{
-		transform: rotate(0deg);
-	}
-	100%
-	{
-		transform: rotate(360deg);
-	}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.animated_border_box span
-{
-	position: absolute;
-	inset: 5px;
-	border-radius: 16px;
-	/*background: #0c1022;*/
-	background: rgba(33, 34, 38, 1);
-	z-index: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: var(--font-fourth);
-	color: #fff;
-	font-size: 1.7rem;
-	padding: 5px;
+.animated_border_box span {
+  inset: 5px;
+  border-radius: 16px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--font-fourth);
+  color: #fff;
+  font-size: 1.7rem;
 }
 
-@media screen and (max-width: 1280px){
-	.animated_border_box{
-		width: 100%;
-	}
+@media screen and (max-width: 1280px) {
+  .animated_border_box {
+    width: 100%;
+  }
 }

@@ -13,12 +13,9 @@ import GenericHero from "@/components/hero/generic-hero";
 import SectionTitle from "@/components/UI/section-title/section-title";
 import DoubleImg from "@/components/double_img/generic-double-images";
 import ImageStack from "@/components/image-stack/image-stack";
-import Slider from "@/components/slider/slider";
-import ContactForm from "@/components/contact-form/contact-form";
-import AnimatedBorder from "@/components/UI/animated-border/animated-border";
 import Layout from "@/components/layout/layout";
 import Comments from "@/components/comments/comments";
-import { fetchReviews } from "@/services/googleBusinessService";
+import { fetchReviews } from "@/store/data/google/googleBusinessService";
 import { unblockScroll } from "@/utils/scrollBlocker";
 
 {
@@ -42,6 +39,7 @@ import slide5 from "../assets/img/archerytag/slides/slide5.png";
 import slide6 from "../assets/img/archerytag/slides/slide6.png";
 import PriceSlider from "@/components/priceBox/PriceSlider";
 import arrow from "../assets/img/icones/Arrow.webp";
+import ReservationBox from "@/components/ReservationBox/reservation";
 
 const slidesData = [
   {
@@ -410,7 +408,7 @@ const Paintball = () => {
           </div>
         </section>
 
-        {/*-----------  Equipment  -------------*/}
+        {/*-----------  Contact Form  -------------*/}
         <section
           id={"equipment"}
           className={"container-fluid paintball"}
@@ -419,23 +417,16 @@ const Paintball = () => {
           <div className={"container-fluid"}>
             <div className="row">
               <SectionTitle
-                title={"Conditions et équipement"}
+                title={"Réservez votre partie de Paintball"}
                 borderColor={sectionTitle.titleBorderColor}
                 borderPosition={"align_right"}
                 background={"transparent"}
               ></SectionTitle>
               <div className={"col-md-12 equipment_content"}>
-                <AnimatedBorder>
-                  <p>
-                    Pour nous rejoindre, rien de plus simple il vous suffit
-                    d&apos;avoir entre 8 ans pour le laser et 16ans pour le
-                    l&apos;airsoft.
-                  </p>
-                  <p>
-                    Au niveau de l&apos;équipement vous pouvez apporter votre
-                    équipement ou en louer sur place.
-                  </p>
-                </AnimatedBorder>
+                <ReservationBox
+                  image={paintballLogo}
+                  colorCode={sectionTitle.titleBorderColor}
+                />
               </div>
             </div>
           </div>
@@ -453,20 +444,7 @@ const Paintball = () => {
           <Slider sliderItems={slidesData} />
         </section>
         */}
-        {/*-----------  Contact Form  -------------*/}
-        <div
-          id="contact"
-          className={"container-fluid contact_form_box"}
-          style={style}
-        >
-          <SectionTitle
-            title={"Contactez-nous"}
-            borderColor={sectionTitle.titleBorderColor}
-            borderPosition={"align_right"}
-            background={"transparent"}
-          ></SectionTitle>
-          <ContactForm />
-        </div>
+
         {/*--------------    Comments    ----------------*/}
 
         <section id={"comments"} className={"container-fluid"} style={style}>

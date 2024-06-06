@@ -31,8 +31,7 @@ import lasertagBgRmv from "../../src/assets/img/3d/laser_tag_3d_rmv.webp";
 import Comments from "@/components/comments/comments";
 import Layout from "@/components/layout/layout";
 
-import { fetchReviews } from "@/services/googleBusinessService";
-import Link from "next/link";
+import { fetchReviews } from "@/store/data/google/googleBusinessService";
 import Image from "next/image";
 import CardWithDelay from "@/components/3d-card/CardWithDelay";
 

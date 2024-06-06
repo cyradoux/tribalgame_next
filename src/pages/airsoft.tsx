@@ -24,6 +24,7 @@ import { fetchReviews } from "@/services/googleBusinessService";
 {
   /*-----------  Images  -------------*/
 }
+import airsoftLogo from "../assets/img/logo/airsoftLogo.svg";
 
 import slide1 from "../assets/img/airsoft/slides/slide1.png";
 import slide2 from "../assets/img/airsoft/slides/slide2.png";
@@ -41,6 +42,7 @@ import mask from "../assets/img/airsoft/mask-removebg.webp";
 import PriceSlider from "@/components/priceBox/PriceSlider";
 import arrow from "../assets/img/icones/Arrow.webp";
 import airsoftHero from "../assets/img/airsoft/playerHero.webp";
+import ReservationBox from "@/components/ReservationBox/reservation";
 
 {
   /*-----------  Données  -------------*/
@@ -487,17 +489,10 @@ const Airsoft = () => {
                 background={"transparent"}
               ></SectionTitle>
               <div className={"col-md-12 equipment_content"}>
-                <AnimatedBorder>
-                  <p>
-                    Pour nous rejoindre, rien de plus simple il vous suffit
-                    d&apos;avoir entre 8 ans pour le laser et 16ans pour
-                    l&apos;airsoft.
-                  </p>
-                  <p>
-                    Au niveau de l&apos;équipement vous pouvez apporter votre
-                    équipement ou en louer sur place.
-                  </p>
-                </AnimatedBorder>
+                <ReservationBox
+                  image={airsoftLogo}
+                  colorCode={sectionTitle.titleBorderColor}
+                />
               </div>
             </div>
           </div>

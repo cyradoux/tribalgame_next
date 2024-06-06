@@ -1,21 +1,3 @@
-/* const API_URL = "https://mybusiness.googleapis.com/v4";
-const accountId = "2791793362"
-const locationId = "ChIJGa4iYUPgwkcRHSCGJHXYhyY"
-
-
-export async function fetchReviews() {
-  const url = `${API_URL}/accounts/${accountId}/locations/${locationId}/reviews`;
-
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching reviews:", error);
-    throw new Error("Failed to fetch reviews");
-  }
-} */
-
 export function fetchReviews() {
   const review = [
     {
